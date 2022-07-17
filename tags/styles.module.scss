@@ -1,0 +1,260 @@
+// -------------------------------------------------
+// Template styles for tags/components using classes
+// -------------------------------------------------
+$red: #e70000;
+$darkRed:#910000;
+$lightRed: #ffdbdb;
+$gray: #2b2b2b;
+$lightGray: #dadada;
+$darkGray: #1d1d1d;
+$transparentlightGray: #4A4A4AC4;
+$transparentGray: #333333c4;
+$white: #FBFBFB;
+$font1: 'Poppins', sans-serif;
+$fontCode: 'Source Code Pro', monospace;
+$postBackground: hsla(0, 0%, 2%, 0.87);
+$postContentBg: rgb(214, 214, 214);
+$secondaryBg: rgb(40, 44, 52);
+$linkHover: #ffc343;
+
+// ================[ Titles ]================
+.title{
+    padding: 10px;
+    font-size: 3.6rem;
+    color: $white;
+}
+.title2{
+    padding: 10px;
+    font-size: 2.8rem;
+    color: $white;
+}
+.title3{
+    padding: 10px;
+    font-size: 2rem;
+    color: $white;
+}
+
+// ================[ Paragraph ]================
+.paragraph{
+    color: $lightGray;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 20px 0;
+}
+
+// ================[ Code ]================
+.code{
+    position: relative;
+    color: $white;
+    padding: 50px;
+    background-color: $secondaryBg;
+    border-radius: 5px;
+    font-family: $fontCode;
+    font-weight: 300;
+    font-size: 1.2em;
+
+    overflow: hidden;
+    
+    & .codeBtns{
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        & div{
+            width: 15px;
+            height: 15px;
+            margin: 12px 4px;
+            border-radius: 50%;
+            opacity: .6;
+            
+            &:nth-child(1){background-color: orange;}
+            &:nth-child(2){background-color: rgb(0, 187, 0);}
+            &:nth-child(3){background-color: red;}
+            
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    
+    & .codeCopied{
+        position: absolute;
+        bottom: -20px;
+        right: 80px;
+        font-size: .7em;
+        color:#5a5a5a;
+        
+        &.codeCopiedAnimation{
+            animation: showCopied 2.5s forwards;
+        }
+    }
+    @keyframes showCopied {
+        from{
+            display: inline-block;
+            bottom: -10px;
+            opacity: 0;
+        }
+        30%{
+            bottom: 10px;
+            opacity: 1;
+        }
+        
+        70%{
+            bottom: 10px;
+            opacity: 1;
+        }
+        to{
+            display: none;
+            bottom: -10px;
+            opacity: 0;
+        }
+    }
+    
+    & .codeCopy{
+        --size: 35px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 10px;
+        opacity: 0;
+        width: var(--size);
+        height: var(--size);
+        filter: invert(90);
+        background-image: url("../assets/icons/copy.png");
+        background-size: calc( var(--size) - 13px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(117, 117, 117, 0.192);
+        
+        transition: all 80ms ease;
+    }
+
+    &:hover .codeCopy{
+        opacity: .5;
+
+        &:hover{
+            filter: invert(90) brightness(180%);
+        }
+    }
+
+}
+
+// ================[ Image ]================
+.image{
+    margin: 20px auto;
+    position: relative;
+
+    & img{
+        border-radius: 10px;
+    }
+}
+
+// ================[ Unordered list ]================
+.ulist{
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding-left: 40px;
+    list-style:none;
+
+    & li{
+        position: relative;
+    }
+
+    & li::before{
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: rgb(70, 70, 70);
+        border-radius: 50%;
+    }
+}
+
+// ================[ Callout ]================
+.callout{
+    position: relative;
+    margin: 30px 0;
+    padding: 40px;
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: 300;
+    background-color: $gray;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 black;
+
+    &::before{
+        display: inline-block;
+        position: absolute;
+        top: -16px;
+        font-size: .8em;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: inherit;
+
+    }
+
+    &.warning::before{
+        --color: orange;
+        content: "Warning!";
+        border: 1px solid var(--color);
+        color: var(--color);
+    }
+    &.info::before{
+        --color: #55c5eb;
+        content: "Information";
+        border: 1px solid var(--color);
+        color: var(--color);
+    }
+    &.tip::before{
+        --color: rgb(255, 238, 0);
+        content: "Pro tip!";
+        border: 1px solid var(--color);
+        color: var(--color);
+    }
+}
+
+// ================[ Quote ]================
+.quote{
+    margin: 20px 0;
+    padding: 30px;
+    background-color: $gray;
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border-left: 8px solid $lightGray;
+
+    & span{
+        display: block;
+        font-weight: 500;
+        font-size: 1.3rem;
+        padding-bottom: 10px;
+    }
+}
+
+.link{
+    background-color: $gray;
+    color: $white;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    
+    &:hover{
+        color: $linkHover;
+    }
+}
+
+// ================[ Caption ]================
+.caption{
+    display: block;
+    padding: 2px 10px;
+    
+    text-align: end;
+    color: rgba(168, 168, 168, 0.795);
+    font-size: .9rem;
+    font-style: italic;
+    font-weight: 300;
+}
