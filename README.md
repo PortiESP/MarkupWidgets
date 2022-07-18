@@ -108,7 +108,7 @@ All the widgets support the `style` prop to handle the component style, anyways 
   - [`UList`](#ulist)
   - [`Callout`](#callout)
   - [`Quote`](#quote)
-  - [`Colors`]()
+  - [`Colors`](#colors)
 
 
 ## Title
@@ -307,3 +307,11 @@ Lets colour the <C aquamarine>example</C> text
 Lets colour the <C color="aquamarine">example</C> text
 Lets colour the <C color="rgb(127, 255, 212)">example</C> text
 ```
+
+*Example of the colors usage in a code widget*
+ 
+![Code example screenshoot](https://i.gyazo.com/83ab08f18b17588aa7fa03e7ee4c77cb.png  "Colors example screenshoot")
+
+*Syntax of the screenshoot*
+
+![Code syntax screenshoot](https://i.gyazo.com/793b7d79515a6d87a61456df13b547e4.png "Colors example syntax screenshoot")
