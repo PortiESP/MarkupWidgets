@@ -14,9 +14,55 @@ The MarkupWidgets module is a packet of React components (widgets) that provides
 
 ### *Example page:*
 
+<details>
+  <summary>Example screenshoots</summary> 
+
 ![Screenshoot page 1](https://i.gyazo.com/d6d15a8a876deedf5358e82d18a3b094.jpg)
 ![Screenshoot page 2](https://i.gyazo.com/a9e96bbb6ab3c3af088d3583531b0d9b.jpg)
 ![Screenshoot page 3](https://i.gyazo.com/edc26983da335f72ac784db9fc531808.png)
+  
+ </details>
+
+<details>
+  <summary>Example syntax</summary> 
+
+#### Code of the screenshoots above...
+
+```js
+<>
+    <Tags.Title>
+        Title
+    </Tags.Title>
+    <Tags.Paragraph>
+        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas Letraset, las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+    </Tags.Paragraph>
+    <Tags.Title2>
+        Subtitle
+    </Tags.Title2>
+    <Tags.Code>
+                                                                // Escaping collons
+        <Cmd>git</Cmd> <Opt>commit</Opt> <Flag>-m</Flag> <Str>{'"This is a new commit"'}</Str> &gt; <Path>./text.txt</Path>
+    </Tags.Code>
+    <Tags.Title3>
+        Subtitle
+    </Tags.Title3>
+    <Tags.Img img={testImg} alt="Alt text"/>
+    <Tags.UList items={["Item 1", "Item 2", "Item 3", "Item 4"]} />
+    <Tags.Callout label="custom" labelData={{text: "Secret", color: "#25AA88", style: ["font-weight: 500;", "filter: brightness(130%);"]}}>
+        This is a custom callout block
+    </Tags.Callout>
+    <Tags.Callout  >
+        This is a custom callout block
+    </Tags.Callout>
+    <Tags.Quote title="Quote title" text="This is a template text for a quote element as a text prop" />
+    <Tags.Quote title="Quote title children">This is a template text for a quote element as a children</Tags.Quote>
+    <Tags.Paragraph>
+        Lorem Ipsum es simplemente el texto <Tags.Link href="google.com">Link text</Tags.Link> de relleno de las imprentas y archivos.
+    </Tags.Paragraph>
+</>
+```
+
+ </details>
 
 ------------------------------------------------
 
