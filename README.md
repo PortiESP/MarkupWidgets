@@ -1,5 +1,5 @@
 
-# MarkupWidgets docs
+# MarkupWidgets docs 📖
 
 The MarkupWidgets module is a packet of React components (widgets) that provides more tags for building web pages that the programmer can use as default but also customize the base component.
 
@@ -7,15 +7,15 @@ The MarkupWidgets module is a packet of React components (widgets) that provides
 
 ### Features
 
-- Fully customizable
-- Interactive widgets
-- Prop | wrap based content
-- Nice designs
+- 🎨 Fully customizable
+- 🕹️ Interactive widgets
+- 💼 Prop | wrap based content
+- 😍 Nice designs 
 
 ### *Example page:*
 
 <details>
-  <summary>Example screenshoots</summary> 
+  <summary>Example screenshoots 🖼️</summary> 
 
 ![Screenshoot page 1](https://i.gyazo.com/d6d15a8a876deedf5358e82d18a3b094.jpg)
 ![Screenshoot page 2](https://i.gyazo.com/a9e96bbb6ab3c3af088d3583531b0d9b.jpg)
@@ -24,7 +24,7 @@ The MarkupWidgets module is a packet of React components (widgets) that provides
  </details>
 
 <details>
-  <summary>Example syntax</summary> 
+  <summary>Example syntax 📟</summary> 
 
 #### Code of the screenshoots above...
 
@@ -68,7 +68,7 @@ The MarkupWidgets module is a packet of React components (widgets) that provides
 
 ## How to use the widgets?
 
-### Download the module
+### Download the module 📥
 
 Navigate to the path of the folder where you want to install the module and clone from the github
 
@@ -76,7 +76,7 @@ Navigate to the path of the folder where you want to install the module and clon
 git clone https://github.com/PortiESP/MarkupWidgets.git
 ```
 
-### Import the module
+### Import the module 🧩
 
 Import the module from the file where you want to have access to the components, the module is structured in a way that the components can be imported in 3 diferent ways
 - Import directly from the component file
@@ -93,7 +93,7 @@ import {Title, Paragraph, Code, Callout} from "./MarkupWidgets/Tags"
 import Tags from "./MarkupWidgets/Tags"
 ```
 
-### Use the widgets
+### Use the widgets 🖨️
 
 Using the widgets in the return of a React component
 
@@ -114,7 +114,7 @@ export default function MyComponent(){
 }
 ```
 
-### Wrapper & prop based widgets
+### Wrapper & prop based widgets 💼
 
 Most of the widget in the module are compatible with both, *wrapper* and *prop* based tags
 
@@ -145,7 +145,7 @@ All the widgets support the `style` prop to handle the component style, anyways 
 
 ----------------------------------------------------------------
 
-## Widgets list
+## Widgets list 📜
   - [`Title`](#title)
   - [`Paragraph`](#paragraph)
   - [`Link`](#link)
