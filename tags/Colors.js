@@ -17,3 +17,4 @@ const Path = props => <span style={{color: "hsl(190, 82%, 56%)"}}>{props.childre
 
 
 export {Yellow, Green, Blue, Red, Orange, Gray, Black, Color, Cmd, Str, Flag, Opt, Path}
+export default Color;
