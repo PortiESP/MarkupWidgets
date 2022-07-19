@@ -254,12 +254,13 @@ There are also 3 decorative buttons at the *top-right* corder, this buttons are 
     git commit -m "This is a new commit" ./text.txt
 </Tags.Code>
 
-// Example for escaped characters
+// Example for second image
+// This is how we parse special characters, new lines and tabs
 <Tags.Code>{`
-export default (
-    <>
-
-    </>
+export default (<br/>
+    {"<>"}                            <br/>
+        {"  "}<Flag>comment</Flag>    <br/>
+    {"</>"}                           <br/>
 )
 `}</Tags.Code>
 
@@ -281,6 +282,7 @@ This is some content <Tags.Code inline color="#ab124F">npm install react</Tags.C
 > Both options **allow** custom styles with the *style* prop
 
 ![Code example screenshoot](https://i.gyazo.com/83ab08f18b17588aa7fa03e7ee4c77cb.png  "Code example screenshoot")
+![Code2 example screenshoot](https://i.gyazo.com/ca52db55395134fae205865957169e7e.png  "Code2 example screenshoot")
 ![Inline code example screenshoot](https://i.gyazo.com/ddeaea6b199729d98eaddeab84b1b538.png  "Inline code example screenshoot")
 
 
