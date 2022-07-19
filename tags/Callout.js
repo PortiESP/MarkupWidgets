@@ -38,16 +38,16 @@ export default function Callout(props){
                         45deg,
                         #000000,
                         #000000 10px,
-                        #e4f500 10px,
-                        #e4f500 20px
+                        #ffd000 10px,
+                        #ffd000 20px
                     );
                     padding: 3px;
                 }
                 div.danger::before{
                     content: "${props.labelData && props.labelData.text || "Danger!"}";
-                    border: 1px solid ${props.labelData ? props.labelData.color?props.labelData.color: "#e4f500": "#e4f500"};
+                    border: 1px solid ${props.labelData ? props.labelData.color?props.labelData.color: "#ffd000": "#ffd000"};
                     font-weight: 30;
-                    color: ${props.labelData ? props.labelData.color?props.labelData.color: "#e4f500": "#e4f500"};
+                    color: ${props.labelData ? props.labelData.color?props.labelData.color: "#ffd000": "#ffd000"};
                     ${props.labelData && props.labelData.style && props.labelData.style.join("")}
                 }
 

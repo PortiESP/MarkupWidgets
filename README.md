@@ -314,7 +314,7 @@ This widget can take 3 styles:
 ![Callout example screenshoot](https://i.gyazo.com/48442e0ad328a522487a5f856c08d1c8.png  "Basic callout example screenshoot")
 ![Callout example screenshoot](https://i.gyazo.com/9015635234d86070f35eee04ede0712f.png  "Warning callout example screenshoot")
 ![Callout example screenshoot](https://i.gyazo.com/dcd5e748b3ede14a40ae3cae11ae3ede.png  "Custom callout example screenshoot")
-![Callout example screenshoot](https://i.gyazo.com/51cd2d716025545dd073a0ffbeb670dd.png "Danger example screenshoot")
+![Callout example screenshoot](https://i.gyazo.com/106ef547673da2507483068a098f4469.png "Danger example screenshoot")
 
 ## Quote
 
