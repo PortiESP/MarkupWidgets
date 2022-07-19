@@ -1,4 +1,4 @@
-import {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation, inlineCode} from "./styles.module.scss"
+import {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation, inlineCode, caption} from "./styles.module.scss"
 import {useRef, useState} from "react"
 
 
@@ -29,6 +29,13 @@ export default function Code(props){
             </div>
             <div className={codeCopy} onClick={copy}/>
             <span className={[codeCopied, showCopied?codeCopiedAnimation:""].join(" ")}>Copied to clipboard...</span>
+            { 
+                    props.caption ?
+                    <div className={caption}>
+                        <span>{props.caption}</span>
+                    </div>:
+                    ""
+            }
         </div>
     )
 }
