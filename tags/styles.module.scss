@@ -49,8 +49,11 @@ $linkHover: #ffc343;
     padding: 50px;
     background-color: $secondaryBg;
     border-radius: 5px;
-    font-family: $fontCode;
     font-weight: 300;
+
+    & pre{
+        font-family: "courier new", courier, monospace;
+    }
 
     overflow: hidden;
     
