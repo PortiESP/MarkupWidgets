@@ -266,7 +266,7 @@ This is some content <Tags.Code inline>npm install react</Tags.Code> blablaba
 This is some content <Tags.Code inline color="#ab124F">npm install react</Tags.Code> blablaba
 ```
 
-> To add a new line in your code just type <br /> as the HTML tag or the <Br /> component
+> To add a new line in your code just type <br /> as the HTML tag
 
 > Both options **allow** custom styles with the *style* prop
 
