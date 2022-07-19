@@ -150,11 +150,14 @@ $linkHover: #ffc343;
 
 // ================[ Image ]================
 .image{
-    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     position: relative;
     border-radius: 10px;
-
+    
     & img{
+        
         border-radius: 10px;
     }
 }
