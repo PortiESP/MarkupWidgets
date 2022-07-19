@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function Img(props){
     return (
         <>
-            <div className={className} style={props.style} id={props.id} title={props.title}>
+            <div className={className} style={props.style} id={props.id} title={props.title} onClick={props.onClick}>
                 {
                     typeof props.img === "string" ?
                         props.height && props.width ?
