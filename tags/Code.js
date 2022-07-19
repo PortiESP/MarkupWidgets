@@ -1,4 +1,4 @@
-import {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation} from "./styles.module.scss"
+import {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation, inlineCode} from "./styles.module.scss"
 import {useRef, useState} from "react"
 
 
@@ -12,6 +12,10 @@ export default function Code(props){
         navigator.clipboard.writeText($refText.current.innerText);
         setShowCopied(true)
         setTimeout( ()=> setShowCopied(false), 3000)
+    }
+
+    if (props.inline){
+        return <span className={inlineCode} style={{...props.style, color: props.color}}>{props.children || props.text}</span>
     }
 
     return (

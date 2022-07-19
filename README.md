@@ -155,6 +155,9 @@ All the widgets support the `style` prop to handle the component style, anyways 
   - [`Callout`](#callout)
   - [`Quote`](#quote)
   - [`Colors`](#colors)
+  - [`Hr`](#hr)
+  - [`Br`](#br)
+  - [`italic`/`bold`](#italic--bold-styles)
 
 
 ## Title
@@ -187,12 +190,12 @@ There are 3 types of titles/headings: *h1, h2, h3*
 
 ## Paragraph
 
-Clasic paragraph to write text
+Clasic paragraph to write text, also we can write special characters by adding them inside a JS string
 
 ```html
 <Tags.Paragraph>
     Lorem Ipsum es simplemente el texto de relleno de las imprentas y 
-    archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de 
+    archivos de texto. Lorem {'"Ipsum"'} ha sido el texto de relleno estándar de 
     las industrias desde el año 1500.
 </Tags.Paragraph>
 
@@ -216,13 +219,20 @@ Lorem Ipsum <Tags.Link href="www.example.com">Link text</Tags.Link> de relleno.
 
 ## Img
 
-The image widget suppor the `src`, `alt` and `style` props, this widget will be contained and centered in the parent container 
+Display an image, this component can be used in 3 diferent ways based on the props
+- Passing an image object imported from a path
+- Passing the image path, the image will fit the parent container 
+- Passing the image path and the `height` and `width` props
+
+> The image aspect-ratio will respected no matter the option used
 
 ```javascript
 import testImg from "./exampleImage.jpg"
 
 
 <Tags.Img img={testImg} alt="Alt text"/>
+<Tags.Img img="./images/image.jpg" alt="Alt text"/>
+<Tags.Img img="./images/image.jpg" width="100px" height="50px" alt="Alt text"/>
 ```
 
 ![Img example screenshoot](https://i.gyazo.com/a3ef41ebe0be29818230b3b2791d4381.png  "Img example screenshoot")
@@ -235,6 +245,7 @@ The code widget provides a snippet of some piece of code, if you *hover* into th
 There are also 3 decorative buttons at the *top-right* corder, this buttons are just decorative and dont have any action
 
 ```html
+// Example from the first image
 <Tags.Code>
     git commit -m "This is a new commit" ./text.txt
 </Tags.Code>
@@ -243,7 +254,19 @@ There are also 3 decorative buttons at the *top-right* corder, this buttons are 
 <Tags.Code text="Text template title" />
 ```
 
+There is also an alternative prop to use this component for writtring *inline code*
+
+```html
+// Example from the second image
+This is some content <Tags.Code inline>npm install react</Tags.Code> blablaba
+This is some content <Tags.Code inline color="#ab124F">npm install react</Tags.Code> blablaba
+```
+
+> Both options **allow** custom styles with the *style* prop
+
 ![Code example screenshoot](https://i.gyazo.com/83ab08f18b17588aa7fa03e7ee4c77cb.png  "Code example screenshoot")
+![Inline code example screenshoot](https://i.gyazo.com/ddeaea6b199729d98eaddeab84b1b538.png  "Inline code example screenshoot")
+
 
 
 ## UList
@@ -361,3 +384,59 @@ Lets colour the <C color="rgb(127, 255, 212)">example</C> text
 *Syntax of the screenshoot*
 
 ![Code syntax screenshoot](https://i.gyazo.com/793b7d79515a6d87a61456df13b547e4.png "Colors example syntax screenshoot")
+
+
+
+## Hr
+
+Creates a simple horizontal line to divide content, it can also take parameter `small` to create a shorter line
+
+```js
+<Hr />
+<Hr small />
+```
+
+![Hr screenshoot](https://i.gyazo.com/01e94914817f97017c3cd23c2f4f4399.png "Hr screenshoot")
+![Hr small screenshoot](https://i.gyazo.com/58e556350c525804faf2f9aacd5f78c2.png "Hr small screenshoot")
+
+
+
+## Br
+
+Just a line break, it can take the prope `large` to get a larger space
+
+```js
+<Br />
+<Br large/>
+```
+
+## Italic & Bold styles
+
+To apply *italic* or *bold* styles to some text you can add it as you will do in HTML:
+```js
+<Paragraph>
+    This is an <i>italic</i> word
+</Paragraph>
+```
+
+
+
+# FAQs
+
+- **How do is escape characters inside a component**: 
+```js
+// The inner collons are parsed as part of a JS string and the interpolated in the JSX code
+<> This is an {'"example"'} string </>
+```
+
+- **How do I add a new line in my paragraph, code, callout, etc...**:
+```js
+// The code is parsed as normal text but the <br/> will be parsed as HTML
+<Code>
+const myArray = {
+    elem1,  <br/>
+    elem2,  <br/>
+    elem3   <br/>
+}
+</Code>
+```
