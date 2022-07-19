@@ -225,43 +225,30 @@ $linkHover: #ffc343;
 .callout{
     position: relative;
     margin: 30px 0;
-    padding: 40px;
     color: $white;
     font-size: 1.3rem;
     font-weight: 300;
     background-color: $gray;
     border-radius: 8px;
-    box-shadow: 0 0 10px 0 black;
-
+    
     &::before{
         display: inline-block;
         position: absolute;
         top: -16px;
+        left:30px;
         font-size: .8em;
         padding: 5px 10px;
         border-radius: 10px;
-        background-color: inherit;
-
+        background-color: $gray;
+        box-shadow: 0 0 10px 0 black;
     }
-
-    &.warning::before{
-        --color: orange;
-        content: "Warning!";
-        border: 1px solid var(--color);
-        color: var(--color);
-    }
-    &.info::before{
-        --color: #55c5eb;
-        content: "Information";
-        border: 1px solid var(--color);
-        color: var(--color);
-    }
-    &.tip::before{
-        --color: rgb(255, 238, 0);
-        content: "Pro tip!";
-        border: 1px solid var(--color);
-        color: var(--color);
-    }
+    
+    & p{
+        background-color: $gray;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px 0 black;
+    }    
 }
 
 // ================[ Quote ]================
