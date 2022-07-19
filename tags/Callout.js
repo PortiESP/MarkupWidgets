@@ -33,7 +33,7 @@ export default function Callout(props){
                 }  
             `}</style>
 
-            <p className={[className, props.label].join(" ")} style={props.style}>{props.children || props.text}</p>
+            <p className={[className, props.label].join(" ")} style={props.style} id={props.id}>{props.children || props.text}</p>
         </>
     )
 }

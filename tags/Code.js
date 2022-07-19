@@ -15,11 +15,11 @@ export default function Code(props){
     }
 
     if (props.inline){
-        return <span className={inlineCode} style={{...props.style, color: props.color}}>{props.children || props.text}</span>
+        return <span className={inlineCode} style={{...props.style, color: props.color}} id={props.id}>{props.children || props.text}</span>
     }
 
     return (
-        <div className={className} style={props.style}>
+        <div className={className} style={props.style} id={props.id}>
             <p ref={$refText}>{props.children || props.text}</p>
 
             <div className={codeBtns}>

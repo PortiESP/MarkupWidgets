@@ -11,6 +11,7 @@ The MarkupWidgets module is a packet of React components (widgets) that provides
 - 🕹️ Interactive widgets
 - 💼 Prop | wrap based content
 - 😍 Nice designs 
+- 🏷️ Styles, IDs, etc...
 
 ### *Example page:*
 

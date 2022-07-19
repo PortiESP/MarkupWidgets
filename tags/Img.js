@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function Code(props){
     return (
         <>
-            <div className={className} style={props.style}>
+            <div className={className} style={props.style} id={props.id}>
                 {
                     typeof props.img === "string"
                     ?
