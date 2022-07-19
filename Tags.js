@@ -15,4 +15,4 @@ const tags = { Title, Title2, Title3, Paragraph, Code, Img, UList, Callout, Quot
 
 // Exports
 export default tags; // Export all
-export { Title, Title2, Title3, Paragraph, Code, Img, Callout, Quote, Link, Hr, Br }; // Export individual
+export { Title, Title2, Title3, Paragraph, Code, Img, UList, Callout, Quote, Link, Hr, Br }; // Export individual
