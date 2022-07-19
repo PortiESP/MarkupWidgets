@@ -254,7 +254,17 @@ There are also 3 decorative buttons at the *top-right* corder, this buttons are 
     git commit -m "This is a new commit" ./text.txt
 </Tags.Code>
 
+// Example for escaped characters
+<Tags.Code>{`
+export default (
+    <>
 
+    </>
+)
+`}</Tags.Code>
+
+
+// Example with text prop
 <Tags.Code text="Text template title" />
 ```
 

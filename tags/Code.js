@@ -20,7 +20,7 @@ export default function Code(props){
 
     return (
         <div className={className} style={props.style} id={props.id}>
-            <p ref={$refText}>{props.children || props.text}</p>
+            <pre ref={$refText}>{props.children || props.text}</pre>
 
             <div className={codeBtns}>
                 <div className="btnRed" />
