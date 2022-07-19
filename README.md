@@ -234,6 +234,8 @@ import testImg from "./exampleImage.jpg"
 <Tags.Img img={testImg} alt="Alt text"/>
 <Tags.Img img="./images/image.jpg" alt="Alt text"/>
 <Tags.Img img="./images/image.jpg" width="100px" height="50px" alt="Alt text"/>
+
+<Tags.Img img={testImg} alt="Alt text" title="Title" caption="Caption"/>
 ```
 
 ![Img example screenshoot](https://i.gyazo.com/a3ef41ebe0be29818230b3b2791d4381.png  "Img example screenshoot")

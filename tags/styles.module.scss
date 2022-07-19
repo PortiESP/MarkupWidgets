@@ -150,16 +150,37 @@ $linkHover: #ffc343;
 
 // ================[ Image ]================
 .image{
-    width: 100%;
+    margin: auto;
+    // width: 80%;
+    position: relative;
     display: flex;
     justify-content: center;
+    justify-items: center;
     position: relative;
     border-radius: 10px;
     
     & img{
-        
         border-radius: 10px;
     }
+
+    &:hover .caption{
+        visibility:visible;
+    }
+}
+.caption{
+    position: absolute;
+    bottom: 6px;
+    background-color: rgba(180, 180, 180, 0.589);
+    border-radius: 20px;
+    visibility: hidden;
+
+    
+    
+    & span{
+        font-weight: 400;
+        color: rgb(58, 57, 57);
+    }
+    // background-color: red;
 }
 
 // ================[ Unordered list ]================
