@@ -46,7 +46,7 @@ export default function Callout(props){
                 div.danger::before{
                     content: "${props.labelData && props.labelData.text || "Danger!"}";
                     border: 1px solid ${props.labelData ? props.labelData.color?props.labelData.color: "#ffd000": "#ffd000"};
-                    font-weight: 30;
+                    font-weight: 400;
                     color: ${props.labelData ? props.labelData.color?props.labelData.color: "#ffd000": "#ffd000"};
                     ${props.labelData && props.labelData.style && props.labelData.style.join("")}
                 }
