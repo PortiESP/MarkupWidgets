@@ -1,10 +1,10 @@
 import {image as className, imgNoDims} from "./styles.module.scss"
 import Image from "next/image"
 
-export default function Code(props){
+export default function Img(props){
     return (
         <>
-            <div className={className} style={props.style} id={props.id}>
+            <div className={className} style={props.style} id={props.id} title={props.title}>
                 {
                     typeof props.img === "string"
                     ?
