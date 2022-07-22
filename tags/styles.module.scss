@@ -51,16 +51,29 @@ $linkHover: #ffc343;
 .code{
     position: relative;
     color: $white;
-    padding: 50px;
     background-color: $secondaryBg;
     border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
     
     overflow: hidden;
-    
     & pre{
         font-family: monospace;
         font-size: 1rem;
         font-weight: 200;
+        padding: 30px;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar{
+            height: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: rgba(128, 128, 128, 0.267);
+            border-radius: 20px;
+        }
         & span{
             font-family: inherit;
             font-weight: inherit;
@@ -73,10 +86,13 @@ $linkHover: #ffc343;
         position: absolute;
         top: 0;
         right: 10px;
+        margin: 12px 0;
+
         & div{
-            width: 15px;
-            height: 15px;
-            margin: 12px 4px;
+            --size: 15px;
+            width: var(--size);
+            height: var(--size);
+            margin: 0 4px;
             border-radius: 50%;
             opacity: .6;
             
@@ -320,5 +336,97 @@ $linkHover: #ffc343;
 // ================[ Br ]================
 .br{
     width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ===================[ Media queries ]================
+@media (max-width:600px){
+    .paragraph{
+        font-size: 1rem;
+        line-height: 22px;
+    }
+    
+    .code{
+        
+        & pre{
+            padding: 25px 20px;
+            font-size: .9rem;
+        }
+        
+        & .codeBtns{
+            margin: 8px 0;
+            right: 4px;
+            & div{
+                --size: 10px;
+                margin: 0 4px;
+            }
+        }
+        & .codeCopy{
+            opacity: .5;
+        }
+    }
+
+    .image{
+        padding: 4px;
+    }
+
+    .ulist{
+        padding: 4px 0;
+        padding-left: 30px;
+        font-size: 1rem;     
+        
+        & li {
+            padding: 6px 0;
+        }
+        & li::before{
+            left: -20px;
+            height: 10px;
+            width: 10px;
+        }
+    }
+
+    .callout{
+        &::before{
+            font-size: .7em;
+            top: -14px;
+            left: 20px;
+            padding: 3px 10px;
+        }
+        & p{
+            padding: 20px;
+            font-size: 1.2rem;
+        }
+    }
+
+    .quote{
+        padding: 20px;
+
+        font-size: .9rem;
+
+        & h4{
+            font-size: 1.4rem;
+        }
+    }
+
+    .link{
+        font-size: 1rem;
+    }
+
+    .caption{
+        display: none;
+    }
 
 }
