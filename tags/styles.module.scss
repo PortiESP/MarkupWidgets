@@ -19,18 +19,23 @@ $linkHover: #ffc343;
 
 // ================[ Titles ]================
 .title{
-    padding: 10px;
+    padding: 10px 0;
     font-size: 3.6rem;
     color: $white;
 }
 .title2{
-    padding: 10px;
+    padding: 5px 0;
     font-size: 2.8rem;
     color: $white;
 }
 .title3{
-    padding: 10px;
+    padding: 10px 0;
     font-size: 2rem;
+    color: $white;
+}
+.title4{
+    padding: 4px 0;
+    font-size: 1.5rem;
     color: $white;
 }
 
@@ -39,7 +44,7 @@ $linkHover: #ffc343;
     color: $lightGray;
     font-size: 1.2rem;
     font-weight: 300;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 // ================[ Code ]================
@@ -49,10 +54,14 @@ $linkHover: #ffc343;
     padding: 50px;
     background-color: $secondaryBg;
     border-radius: 5px;
-    font-weight: 300;
-
-
+    
     overflow: hidden;
+    
+    & pre{
+        font-family: monospace;
+        font-size: 1rem;
+        font-weight: 300;
+    }
     
     & .codeBtns{
         display: flex;
@@ -177,21 +186,7 @@ $linkHover: #ffc343;
 
 // ================[ Caption ]================
 
-.caption{
-    position: absolute;
-    top: 10px;
-    background-color: rgba(218, 218, 218, 0.418);
-    border-radius: 20px;
-    visibility: hidden;
 
-    
-    
-    & span{
-        font-weight: 400;
-        color: rgb(66, 66, 66);
-    }
-    // background-color: red;
-}
 
 // ================[ Unordered list ]================
 .ulist{
@@ -282,15 +277,27 @@ $linkHover: #ffc343;
 }
 
 // ================[ Caption ]================
-.caption{
-    display: block;
-    padding: 2px 10px;
+// .caption{
     
-    text-align: end;
-    color: rgba(168, 168, 168, 0.795);
-    font-size: .9rem;
-    font-style: italic;
-    font-weight: 300;
+    
+    //     // background-color: red;
+    // }
+    .caption{
+        position: absolute;
+        top: 10px;
+        background-color: rgba(124, 124, 124, 0.418);
+        border-radius: 20px;
+        display: block;
+        padding: 2px 10px;
+        
+        visibility: hidden;
+    & span{
+        font-family: monospace;
+        font-size: .8rem;
+        font-weight: 400;
+        color: rgb(197, 197, 197);
+    }
+    
 }
 
 // ================[ Hr ]================
