@@ -6,7 +6,7 @@ export default function Quote(props){
     return (
         <>
             <div className={className} style={props.style} id={props.id}>
-                <span>{props.title}</span>
+                <h4>{props.title}</h4>
                 <p>{props.children || props.text}</p>
             </div>
         </>
