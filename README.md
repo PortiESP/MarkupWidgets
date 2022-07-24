@@ -185,7 +185,13 @@ const myArray = {
 
 ## Title
 
-There are 3 types of titles/headings: *h1, h2, h3*
+There are 4 types of titles/headings: *h1, h2, h3, h4* as *Title1, Title2, ...*
+
+> ### **Props**
+> - `background` - Add a background for the title
+> - `text` - Text content
+> - `style` - Styles object
+> - `id` - Add an ID attribute
 
 ```html
 <Tags.Title>
@@ -194,7 +200,7 @@ There are 3 types of titles/headings: *h1, h2, h3*
 
 
 <Tags.Title text="Text template title h1" />
-<Tags.Title2 text="Text template title h2" />
+<Tags.Title2 text="Text template title h2" background="#303030" />
 <Tags.Title3 text="Text template title h3" />
 ```
 
@@ -215,6 +221,11 @@ There are 3 types of titles/headings: *h1, h2, h3*
 
 Clasic paragraph to write text, also we can write special characters by adding them inside a JS string
 
+> ### **Props**
+> - `text` - Text content
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+
 ```html
 <Tags.Paragraph>
     Lorem Ipsum es simplemente el texto de relleno de las imprentas y 
@@ -233,6 +244,13 @@ Clasic paragraph to write text, also we can write special characters by adding t
 
 The link widget is the same as the `<a>` tag but with its own styles
 
+> ### **Props**
+> - `href` - Target location of the link
+> - `title` - Add a *title* attribute to the tag
+> - `text` - Text content
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+
 ```html
 Lorem Ipsum <Tags.Link href="www.example.com">Link text</Tags.Link> de relleno.
 ```
@@ -248,6 +266,17 @@ Display an image, this component can be used in 3 diferent ways based on the pro
 - Passing the image path and the `height` and `width` props
 
 > The image aspect-ratio will respected no matter the option used
+
+> ### **Props**
+> - `img` - Image object/path
+> - `alt` - Alt text
+> - `title` - Add a *title* attribute
+> - `width` - Width of the image
+> - `height` - Height of the image
+> - `caption` - Add a caption text
+> - `onClick` - Add a onClick event callback
+> - `style` - Styles object
+> - `id` - Add an ID attribute
 
 ```javascript
 import testImg from "./exampleImage.jpg"
@@ -269,6 +298,14 @@ import testImg from "./exampleImage.jpg"
 The code widget provides a snippet of some piece of code, if you *hover* into the block an icon will appear at the *bottom-right* corner that you can click to copy the code to the clipboard, a copy message will appear when the button is clicked
 
 There are also 3 decorative buttons at the *top-right* corder, this buttons are just decorative and dont have any action
+
+> ### **Props**
+> - `inline` - Flag for code string
+>   - `color` - Color for the inline code
+> - `caption` - Add a caption text for the code snippet
+> - `text` - Text content
+> - `style` - Styles object
+> - `id` - Add an ID attribute
 
 ```html
 // Example from the first image
@@ -313,6 +350,12 @@ This is some content <Tags.Code inline color="#ab124F">npm install react</Tags.C
 
 This widget take an array as a prop to generate the list
 
+> ### **Props**
+> - `items` - Array of the item strings
+> - `itemStyle` - Style of the idividual items
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+
 ```html
 <Tags.UList items={myItemList} />
 ```
@@ -328,6 +371,13 @@ This widget can take 3 styles:
 - **No label**, only the text
 - **Predefined labels**, The `label` value can the following values (*warning, info, tip, danger*) with predefined styles
 - **Custom label**, The label with custon text & color, but also custom styles
+
+> ### **Props**
+> - `label` - Text shown at the top in an outter block
+> - `labelData` - Text, color, style (*Data taken here only when label='custom'*)
+> - `text` - Text content
+> - `style` - Styles object
+> - `id` - Add an ID attribute
 
 ```html
 <Tags.Callout label="warning">
@@ -351,6 +401,12 @@ This widget can take 3 styles:
 ![Callout example screenshoot](https://i.gyazo.com/106ef547673da2507483068a098f4469.png "Danger example screenshoot")
 
 ## Quote
+
+> ### **Props**
+> - `title` Add a *title* attribute
+> - `text` - Text content
+> - `style` - Styles object
+> - `id` - Add an ID attribute
 
 Quote block, colors can be personalized with the `style` props
 
@@ -431,6 +487,11 @@ Lets colour the <C color="rgb(127, 255, 212)">example</C> text
 
 Creates a simple horizontal line to divide content, it can also take parameter `small` to create a shorter line
 
+> ### **Props**
+> - `small` - Make shorter line
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+
 ```js
 <Hr />
 <Hr small />
@@ -444,6 +505,10 @@ Creates a simple horizontal line to divide content, it can also take parameter `
 ## Br
 
 Just a line break, it can take the prope `large` to get a larger space
+
+> ### **Props**
+> - `height` - Space height (*use units*)
+> - `id` - Add an ID attribute
 
 ```js
 <Br />
@@ -466,39 +531,39 @@ Adds custommizable button, with optional icon and easy-access styling props for 
 Text content can be passed as a wrapped child or by the `text` prop, if 
 text is **not** passed as a wrapped child the prop text must be passed
 
-### **Props**
-
-*All of the props are optional*
-
-- `text` - Text content of the button
-- `icon` - This props receives an image as an object from an `import` statement
-- `id` - Add an ID attribute to the widget
-- `callback` - Callback function triggered when the button is clicked
-
-*Button*
-
-- `borderRadius` - Round the corners (px)
-- `background` - Background style of the button
-  
-*Icon*
-
-- `iconScale` - Multiplier of the icon size (%): *Ex: 120%*
-- `iconInvert` - Invert the colors of the icon (0-100)
-- `iconBackground` - Background of the icon
-  
-*Text*
-
-- `fontSize` - Size of the text (px)
-- `color` - Color of the text
-  
-*Object styles*
-
-- `style` - Global styles of the widget, (*styles not recommended here*)
-- `styleButton` - Style of the inner div, (*button styles are recommentded here*)
-- `styleIcon` - Style of the icon image div
-- `styleText` - Style of the text div
-- `styleHover` - Style of the button when hover (***css syntax***)
-- `styleActive` - Style of the button when active (***css syntax***)
+> ### **Props**
+> 
+> *All of the props are optional*
+> 
+> - `text` - Text content of the button
+> - `icon` - This props receives an image as an object from an `import` statement
+> - `id` - Add an ID attribute to the widget
+> - `callback` - Callback function triggered when the button is clicked
+> 
+> *Button*
+> 
+> - `borderRadius` - Round the corners (px)
+> - `background` - Background style of the button
+>   
+> *Icon*
+> 
+> - `iconScale` - Multiplier of the icon size (%): *Ex: 120%*
+> - `iconInvert` - Invert the colors of the icon (0-100)
+> - `iconBackground` - Background of the icon
+>   
+> *Text*
+> 
+> - `fontSize` - Size of the text (px)
+> - `color` - Color of the text
+>   
+> *Object styles*
+> 
+> - `style` - Global styles of the widget, (*styles not recommended here*)
+> - `styleButton` - Style of the inner div, (*button styles are recommentded here*)
+> - `styleIcon` - Style of the icon image div
+> - `styleText` - Style of the text div
+> - `styleHover` - Style of the button when hover (***css syntax***)
+> - `styleActive` - Style of the button when active (***css syntax***)
   
 ![Example button screenshoot](https://i.gyazo.com/663775cea1dd63fd79ec1524c5d4d9b4.png)
 

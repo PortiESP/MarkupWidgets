@@ -1,7 +1,4 @@
-import Title from "./tags/Title"
-import Title2 from "./tags/Title2"
-import Title3 from "./tags/Title3"
-import Title4 from "./tags/Title4"
+import Title, {Title2, Title3, Title4} from "./tags/Title"
 import Paragraph from "./tags/Paragraph"
 import Code from "./tags/Code"
 import Img from "./tags/Img"
