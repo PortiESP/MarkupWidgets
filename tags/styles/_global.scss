@@ -18,31 +18,3 @@ $linkHover: #ffc343;
 
 
 
-// ============[ Caption ]=============
-.caption{
-    position: absolute;
-    top: 10px;
-
-    background-color: rgba(124, 124, 124, 0.418);
-    border-radius: 20px;
-    display: block;
-    padding: 2px 10px;
-    
-    visibility: hidden;
-    & span{
-        font-family: monospace;
-        font-size: .8rem;
-        font-weight: 400;
-        color: rgb(197, 197, 197);
-    }
-
-}
-
-
-
-@media (max-width:600px){
-    .caption{
-        display: none;
-    }
-
-}

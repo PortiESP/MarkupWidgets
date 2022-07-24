@@ -123,6 +123,12 @@
             visibility: visible;
         }
     }
+
+    & .caption{
+        opacity: .2;
+        color: $lightGray;
+        font-style: italic;
+    }
 }
 
 
