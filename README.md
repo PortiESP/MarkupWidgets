@@ -273,8 +273,7 @@ Display an image, this component can be used in 3 diferent ways based on the pro
 > - `title` - Add a *title* attribute
 > - `width` - Width of the image
 > - `height` - Height of the image
-> - `caption` - Add a caption text
-> - `onClick` - Add a onClick event callback
+> - `hideCaption` - Hides the caption text shown when clicking the image
 > - `style` - Styles object
 > - `id` - Add an ID attribute
 

@@ -21,6 +21,37 @@
     }
 }
 
+.div__zoom_wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.868);
+
+    z-index: 10;
+
+    & .div__zoomImage{
+        position: relative;
+        margin: 10px;
+    }
+    & span{
+        font-family: $font1;
+        font-size: 1.1rem;
+        font-weight: 300;
+        background-color: #3338;
+        padding: 4px 10px;
+        border-radius: 10px;
+        color: #aaa;
+    }
+}
+
 @media (max-width:600px){
     .image{
         padding: 4px;
