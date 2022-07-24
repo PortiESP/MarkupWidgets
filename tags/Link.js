@@ -1,4 +1,4 @@
-import {link as className} from "./styles.module.scss"
+import {link as className} from "./styles/link.module.scss"
 
 
 export default function Link(props){

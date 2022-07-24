@@ -1,0 +1,27 @@
+@import "./global";
+
+.image{
+    margin: auto;
+    padding: 20px;
+    // width: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    border-radius: 10px;
+    
+    & img{
+        border-radius: 10px;
+    }
+
+    &:hover .caption{
+        visibility:visible;
+    }
+}
+
+@media (max-width:600px){
+    .image{
+        padding: 4px;
+    }
+}

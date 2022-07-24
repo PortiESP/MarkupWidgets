@@ -1,0 +1,12 @@
+@import "./global";
+
+
+.hr_line{
+    border:none;
+    height: 2px;
+    background-color: #5353538e;
+    margin: auto;
+    &.hr_small{
+        width: 60%;   
+    }
+}

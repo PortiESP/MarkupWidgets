@@ -1,5 +1,4 @@
-import {callout as className} from "./styles.module.scss"
-import {danger} from "./styles.module.scss"
+import {callout as className} from "./styles/callout.module.scss"
 
 // labelData={{text: "Secret", color: "#25AA88", style: ["font-weight: 500;", "filter: brightness(130%);"]}}
 export default function Callout(props){

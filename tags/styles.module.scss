@@ -206,9 +206,6 @@ $linkHover: #ffc343;
     }
 }
 
-// ================[ Caption ]================
-
-
 
 // ================[ Unordered list ]================
 .ulist{
@@ -299,12 +296,8 @@ $linkHover: #ffc343;
 }
 
 // ================[ Caption ]================
-// .caption{
-    
-    
-    //     // background-color: red;
-    // }
-    .caption{
+
+.caption{
         position: absolute;
         top: 10px;
         background-color: rgba(124, 124, 124, 0.418);
@@ -338,17 +331,6 @@ $linkHover: #ffc343;
     width: 100%;
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

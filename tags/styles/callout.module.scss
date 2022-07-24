@@ -1,0 +1,38 @@
+@import "./global";
+
+.callout{
+    position: relative;
+    margin: 30px 0;
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: 300;
+    background-color: $gray;
+    border-radius: 8px;
+    
+    &::before{
+        display: inline-block;
+        position: absolute;
+        top: -16px;
+        left:30px;
+        font-size: .8em;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: $gray;
+        box-shadow: 0 0 10px 0 black;
+    }
+    
+    & p{
+        background-color: $gray;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px 0 black;
+    }    
+}
+
+@media (max-width:600px){
+    .paragraph{
+        font-size: 1rem;
+        line-height: 22px;
+    }
+}
+

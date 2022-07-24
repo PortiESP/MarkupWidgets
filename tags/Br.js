@@ -1,4 +1,4 @@
-import {br} from "./styles.module.scss"
+import {br} from "./styles/br.module.scss"
 
 // props.
 

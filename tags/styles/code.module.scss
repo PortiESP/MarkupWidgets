@@ -1,0 +1,161 @@
+@import "./global";
+
+.code{
+    position: relative;
+    color: $white;
+    background-color: $secondaryBg;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    
+    overflow: hidden;
+    & pre{
+        font-family: monospace;
+        font-size: 1rem;
+        font-weight: 200;
+        padding: 30px;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar{
+            height: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: rgba(128, 128, 128, 0.267);
+            border-radius: 20px;
+        }
+        & span{
+            font-family: inherit;
+            font-weight: inherit;
+            font-size: inherit;
+        }
+    }
+    
+    & .codeBtns{
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        margin: 12px 0;
+
+        & div{
+            --size: 15px;
+            width: var(--size);
+            height: var(--size);
+            margin: 0 4px;
+            border-radius: 50%;
+            opacity: .6;
+            
+            &:nth-child(1){background-color: orange;}
+            &:nth-child(2){background-color: rgb(0, 187, 0);}
+            &:nth-child(3){background-color: red;}
+            
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+
+    & .codeCopied{
+        position: absolute;
+        bottom: -20px;
+        right: 80px;
+        font-size: .7em;
+        color:#5a5a5a;
+        
+        &.codeCopiedAnimation{
+            animation: showCopied 2.5s forwards;
+        }
+    }
+    @keyframes showCopied {
+        from{
+            display: inline-block;
+            bottom: -10px;
+            opacity: 0;
+        }
+        30%{
+            bottom: 10px;
+            opacity: 1;
+        }
+        
+        70%{
+            bottom: 10px;
+            opacity: 1;
+        }
+        to{
+            display: none;
+            bottom: -10px;
+            opacity: 0;
+        }
+    }
+    
+    & .codeCopy{
+        --size: 35px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 10px;
+        opacity: 0;
+        width: var(--size);
+        height: var(--size);
+        filter: invert(90);
+        background-image: url("../../assets/icons/copy.png");
+        background-size: calc( var(--size) - 13px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(117, 117, 117, 0.192);
+        
+        transition: all 80ms ease;
+    }
+
+    &:hover{
+        & .codeCopy{
+           opacity: .5;
+
+           &:hover{
+               filter: invert(90) brightness(180%);
+            }    
+        }
+
+        & .caption{
+            visibility: visible;
+        }
+    }
+}
+
+
+.inlineCode{
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(71, 71, 71);
+    color: rgb(241, 76, 0);
+    font-weight: 500;
+    padding: 1px 6px;
+    border-radius: 8px;
+}
+
+
+
+
+@media (max-width:600px){
+    .code{
+        
+        & pre{
+            padding: 25px 20px;
+            font-size: .9rem;
+        }
+        
+        & .codeBtns{
+            margin: 8px 0;
+            right: 4px;
+            & div{
+                --size: 10px;
+                margin: 0 4px;
+            }
+        }
+        & .codeCopy{
+            opacity: .5;
+        }
+    }
+}

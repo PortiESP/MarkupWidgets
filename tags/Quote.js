@@ -1,5 +1,5 @@
 
-import {quote as className} from "./styles.module.scss"
+import {quote as className} from "./styles/quote.module.scss"
 
 export default function Quote(props){
 

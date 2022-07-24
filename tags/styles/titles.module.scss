@@ -1,0 +1,30 @@
+@import "./global";
+
+.title{
+    padding: 10px 0;
+    font-size: 3.6rem;
+    color: $white;
+}
+.title2{
+    padding: 5px 0;
+    font-size: 2.8rem;
+    color: $white;
+}
+.title3{
+    padding: 10px 0;
+    font-size: 2rem;
+    color: $white;
+}
+.title4{
+    padding: 4px 0;
+    font-size: 1.5rem;
+    color: $white;
+}
+
+
+@media (max-width:600px){
+    .paragraph{
+        font-size: 1rem;
+        line-height: 22px;
+    }
+}

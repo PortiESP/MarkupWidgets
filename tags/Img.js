@@ -1,4 +1,4 @@
-import {image as className, caption} from "./styles.module.scss"
+import {image as className, caption} from "./styles/image.module.scss"
 import Image from "next/image"
 
 export default function Img(props){

@@ -1,0 +1,17 @@
+@import "./global";
+
+.paragraph{
+    color: $lightGray;
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 10px 0;
+}
+
+
+
+@media (max-width:600px){
+    .paragraph{
+        font-size: 1rem;
+        line-height: 22px;
+    }
+}

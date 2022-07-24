@@ -1,4 +1,4 @@
-import {paragraph as className} from "./styles.module.scss"
+import {paragraph as className} from "./styles/paragraph.module.scss"
 
 export default function Paragraph(props){
     return (

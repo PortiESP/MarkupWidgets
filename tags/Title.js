@@ -1,4 +1,4 @@
-import {title as className} from "./styles.module.scss"
+import {title as className} from "./styles/titles.module.scss"
 
 export default function Title(props){
     return (

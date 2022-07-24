@@ -1,4 +1,4 @@
-import {ulist as className} from "./styles.module.scss"
+import {ulist as className} from "./styles/ul.module.scss"
 
 export default function UList(props){
     return (

@@ -1,4 +1,4 @@
-import {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation, inlineCode, caption} from "./styles.module.scss"
+import {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation, inlineCode, caption} from "./styles/code.module.scss"
 import {useRef, useState} from "react"
 
 
