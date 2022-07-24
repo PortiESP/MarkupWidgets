@@ -1,0 +1,37 @@
+@import "./global";
+
+
+.button_wrap{
+    display: inline-block;
+}
+
+.button{
+    margin: 10px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    background: rgba(26, 25, 25, 0.829);
+    border-radius: 10px;
+
+    &:hover{
+        filter: brightness(130%);
+    }
+}
+
+.button{
+    & .div__image{
+        position: relative;
+        width: 25px;
+        height: 25px;
+        // background-color: red;
+        margin-right: 10px;
+        border-radius: 50%;
+
+        
+    }
+    & .div__text{
+        color: #eee;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+}

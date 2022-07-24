@@ -144,6 +144,26 @@ All the widgets support the `style` prop to handle the component style, anyways 
 <Title style={myStyles}></Title>
 ```
 
+### FAQs
+
+- **How do is escape characters inside a component**: 
+```js
+// The inner collons are parsed as part of a JS string and the interpolated in the JSX code
+<> This is an {'"example"'} string </>
+```
+
+- **How do I add a new line in my paragraph, code, callout, etc...**:
+```js
+// The code is parsed as normal text but the <br/> will be parsed as HTML
+<Code>
+const myArray = {
+    elem1,  <br/>
+    elem2,  <br/>
+    elem3   <br/>
+}
+</Code>
+```
+
 ----------------------------------------------------------------
 
 ## Widgets list 📜
@@ -159,6 +179,8 @@ All the widgets support the `style` prop to handle the component style, anyways 
   - [`Hr`](#hr)
   - [`Br`](#br)
   - [`italic`/`bold`](#italic--bold-styles)
+  - [`Button`](#button)
+
 
 
 ## Title
@@ -437,24 +459,62 @@ To apply *italic* or *bold* styles to some text you can add it as you will do in
 </Paragraph>
 ```
 
+## Button
 
+Adds custommizable button, with optional icon and easy-access styling props for the most common attributes, for more specific ones use the `style` prop
 
-# FAQs
+Text content can be passed as a wrapped child or by the `text` prop, if 
+text is **not** passed as a wrapped child the prop text must be passed
 
-- **How do is escape characters inside a component**: 
+### **Props**
+
+*All of the props are optional*
+
+- `text` - Text content of the button
+- `icon` - This props receives an image as an object from an `import` statement
+- `id` - Add an ID attribute to the widget
+- `callback` - Callback function triggered when the button is clicked
+
+*Button*
+
+- `borderRadius` - Round the corners (px)
+- `background` - Background style of the button
+  
+*Icon*
+
+- `iconScale` - Multiplier of the icon size (%): *Ex: 120%*
+- `iconInvert` - Invert the colors of the icon (0-100)
+- `iconBackground` - Background of the icon
+  
+*Text*
+
+- `fontSize` - Size of the text (px)
+- `color` - Color of the text
+  
+*Object styles*
+
+- `style` - Global styles of the widget, (*styles not recommended here*)
+- `styleButton` - Style of the inner div, (*button styles are recommentded here*)
+- `styleIcon` - Style of the icon image div
+- `styleText` - Style of the text div
+- `styleHover` - Style of the button when hover (***css syntax***)
+- `styleActive` - Style of the button when active (***css syntax***)
+  
+![Example button screenshoot](https://i.gyazo.com/663775cea1dd63fd79ec1524c5d4d9b4.png)
+
 ```js
-// The inner collons are parsed as part of a JS string and the interpolated in the JSX code
-<> This is an {'"example"'} string </>
-```
+// Import icon from path
+import icon from "./myIcon.png"
 
-- **How do I add a new line in my paragraph, code, callout, etc...**:
-```js
-// The code is parsed as normal text but the <br/> will be parsed as HTML
-<Code>
-const myArray = {
-    elem1,  <br/>
-    elem2,  <br/>
-    elem3   <br/>
-}
-</Code>
+<Tags.Button // Some example props
+    text="Example" 
+    icon={icon} 
+    callback={myCallback}
+    borderRadius="10px" 
+    iconScale="140%" 
+    iconInvert="100" 
+    styleActive="background: red;"
+    styleButton={{padding: "30px"}}
+/>
+
 ```
