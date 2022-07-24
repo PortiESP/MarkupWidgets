@@ -125,6 +125,8 @@
     }
 
     & .caption{
+        position: absolute;
+        bottom: 6px;
         opacity: 0;
         color: $lightGray;
         font-style: italic;
