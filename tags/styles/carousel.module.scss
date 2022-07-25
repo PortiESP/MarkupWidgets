@@ -2,8 +2,6 @@
 
 
 .carousel{
-    // background-color: red;
-
     display: flex;
     flex-direction: column;
 }
@@ -13,6 +11,8 @@
     display: flex;
     justify-content: center;
     padding: 50px 15px;
+    height: 400px;
+    overflow: hidden;
 
     .div__card{
         position: absolute;
@@ -125,9 +125,6 @@
             overflow: hidden;
         }
         & .div__card{
-            transform: none;
-            width: 70%;
-            // background-color: red;
             &.div__card.left{
                 transform: translateX(-120%);
                 opacity: 0;
@@ -137,8 +134,8 @@
                 opacity: 0;
             }
             
-            & .currentCard{
-                transform: none;
+            &.div__card.currentCard{
+                transform: translateX(-10px);
                 width: 100%;
             }
         }
