@@ -1,0 +1,120 @@
+@import "./global";
+
+
+.carousel{
+    // background-color: red;
+
+    display: flex;
+    flex-direction: column;
+
+    &.spining{
+        animation: spinClock 1s ease forwards;
+    }
+}
+
+.div__cards_wrap{
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .div__card{
+        position: absolute;
+        width: 30%;
+        height: 200px;
+        margin: 0 20px;
+        background-color: $gray;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 black;
+        
+        --spacing: 80%;
+        --duration: .5s;
+        --backBrightness: 70%;
+
+        &.div__card{
+            z-index: -1;
+            filter: brightness(var(--backBrightness));
+        }
+        &.div__card.prev{
+            transform: translateX(calc(var(--spacing) * -1));
+            z-index: 1;
+        }
+        &.div__card.next{
+            transform: translateX(var(--spacing));
+            
+            z-index: 2;
+        }
+        &.div__card.currentCard{
+            transform: scale(120%);
+            filter: none;
+            z-index: 3;
+            
+        }
+        
+        
+        
+    }
+}
+
+.div__bubbles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    & .bubble{
+        --size: 8px;
+        width: var(--size);
+        height: var(--size);
+        background-color: gray;
+        border-radius: 50%;
+
+        transition: all .2s ease;
+
+        &:hover{
+            filter: brightness(150%);
+        }
+        
+        &.currentBubble{
+            transform: scale(140%);
+            filter: brightness(140%);
+        }
+    }
+
+}
+
+.div__buttons{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+
+    & button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        --size:40px;
+        width: var(--size);
+        height: var(--size);
+        
+        color: #aaa;
+        font-size: 20px;
+        
+        font-weight: 900;
+        background: $transparentGray;
+        padding: 10px;
+        border: none;
+        border-radius: 50%;
+
+        &:hover{
+            color: #eee;
+            background-color: $transparentlightGray;
+        }
+    }
+}
+
+
+
