@@ -13,7 +13,6 @@ export default function Carousel(props){
         index===currentCard && props.callback && props.callback(currentCard)
         index===leftCard && setCurrentCard(leftCard)
         index===rightCard && setCurrentCard(rightCard)
-        // props.clickHandler && props.clickHandler(currentCard)
     }
  
 
@@ -23,7 +22,6 @@ export default function Carousel(props){
             .${sass.div__card}{
                 ${props.spacing && `--spacing: ${props.spacing};`}
                 ${props.duration && `--duration: ${props.duration};`}
-                ${props.backBrightness && `--backBrightness: ${props.backBrightness};`}
             }
         `}</style>
         <div className={className} style={props.style} id={props.id}>
