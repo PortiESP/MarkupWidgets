@@ -6,10 +6,6 @@
 
     display: flex;
     flex-direction: column;
-
-    &.spining{
-        animation: spinClock 1s ease forwards;
-    }
 }
 
 .div__cards_wrap{
@@ -35,21 +31,22 @@
         &.div__card{
             z-index: -1;
             filter: brightness(var(--backBrightness));
+            transform: translateX(0);
+
+            transition: all 1s ease;
         }
-        &.div__card.prev{
+        &.div__card.left{
             transform: translateX(calc(var(--spacing) * -1));
             z-index: 1;
         }
-        &.div__card.next{
+        &.div__card.right{
             transform: translateX(var(--spacing));
-            
             z-index: 2;
         }
         &.div__card.currentCard{
             transform: scale(120%);
             filter: none;
-            z-index: 3;
-            
+            z-index: 3;            
         }
         
         
@@ -115,6 +112,4 @@
         }
     }
 }
-
-
 
