@@ -8,14 +8,12 @@ export default function Carousel(props){
     const getPos = center => [ (center) ? center-1: props.cards.length-1, (center+1) % props.cards.length ];
     const [leftCard, rightCard] = getPos(currentCard) 
 
-    function cardClickHandler(event){
-        if (event.target.className.split(" ")[1] !== sass.currentCard ){
-            event.target.className.split(" ")[1] === sass.left ? setCurrentCard(leftCard): setCurrentCard(rightCard)
-        }
-        else{
-            event.stopPropagation()
-            props.clickHandler && props.clickHandler(currentCard)
-        }
+    function cardClickHandler(index){
+        // console.log(index)
+        index===currentCard && props.callback && props.callback(currentCard)
+        index===leftCard && setCurrentCard(leftCard)
+        index===rightCard && setCurrentCard(rightCard)
+        // props.clickHandler && props.clickHandler(currentCard)
     }
  
 
@@ -30,10 +28,9 @@ export default function Carousel(props){
                      i===leftCard && sass.left || 
                      i===rightCard && sass.right || 
                      i===currentCard && sass.currentCard ||
-
                      ""
                      
-                     return <div key={i} className={[sass.div__card, extraClass].join(" ")} onClick={cardClickHandler}>{props.cards[i]}</div>
+                     return <div key={i} className={[sass.div__card, extraClass].join(" ")}  onClick={()=>cardClickHandler(i)}>{props.cards[i]}</div>
                      
                 })}
                 
