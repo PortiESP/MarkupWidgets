@@ -180,7 +180,7 @@ const myArray = {
   - [`Br`](#br)
   - [`italic`/`bold`](#italic--bold-styles)
   - [`Button`](#button)
-
+  - [`Toggle`](#toggle)
 
 
 ## Title
@@ -582,3 +582,36 @@ import icon from "./myIcon.png"
 />
 
 ```
+
+
+## Toggle
+
+This widget can expand to show more content
+
+> ### **Props**
+> - `title` - The title is shown always, wont be hided
+> - `background` - Background of the container
+> - `backgroundHover` - Background of the header when hover
+> - `arrowColor` - Color of the toggle arrow
+> - `arrowSize` - size of the toggle arrow
+> - `color` - Color of the title text
+> - `fontSize` - Font size of the title
+> - `style` - Styles wrapper object
+> - `id` - Add an ID attribute
+
+```js
+<Tags.Toggle title="Example toggle">
+
+    <Tags.Callout label="info" >
+        This is a custom callout block
+    </Tags.Callout>
+    <Tags.Paragraph>
+    Lorem Ipsum es simplemente el texto <Tags.Link href="google.com" title="ggg">Link text</Tags.Link> de relleno de las imprentas y archivos.
+    </Tags.Paragraph>
+    <Tags.Quote title="Quote title children">This is a template text for a quote element as a children</Tags.Quote>
+    
+</Tags.Toggle>
+```
+
+![Toggle screenshoot](https://i.gyazo.com/0830c1813eabefd9da15bcba21870513.png "Toggle screenshoot")
+![Toggle screenshoot](https://i.gyazo.com/20e234fd89847e9ce8aa3eb9db86daae.png "Toggle screenshoot")
