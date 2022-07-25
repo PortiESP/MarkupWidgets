@@ -8,6 +8,15 @@ export default function Carousel(props){
     const getPos = center => [ (center) ? center-1: props.cards.length-1, (center+1) % props.cards.length ];
     const [leftCard, rightCard] = getPos(currentCard) 
 
+    function cardClickHandler(event){
+        if (event.target.className.split(" ")[1] !== sass.currentCard ){
+            event.target.className.split(" ")[1] === sass.left ? setCurrentCard(leftCard): setCurrentCard(rightCard)
+        }
+        else{
+            event.stopPropagation()
+            props.clickHandler && props.clickHandler(currentCard)
+        }
+    }
  
 
     return (
@@ -24,7 +33,7 @@ export default function Carousel(props){
 
                      ""
                      
-                     return <div key={i} className={[sass.div__card, extraClass].join(" ")}>{props.cards[i]}</div>
+                     return <div key={i} className={[sass.div__card, extraClass].join(" ")} onClick={cardClickHandler}>{props.cards[i]}</div>
                      
                 })}
                 
@@ -33,8 +42,8 @@ export default function Carousel(props){
                 {props.cards.map( (_, i) => <div key={i} className={[sass.bubble, i===currentCard && sass.currentBubble].join(" ")} onClick={()=>setCurrentCard(i)}></div>)}
             </div>
             <div className={sass.div__buttons}>
-                <button onClick={()=>{setCurrentCard(leftCard)}}>{"<"}</button>
-                <button onClick={()=>{setCurrentCard(rightCard)}}>{">"}</button>
+                <button onClick={()=>setCurrentCard(leftCard)}>{"<"}</button>
+                <button onClick={()=>setCurrentCard(rightCard)}>{">"}</button>
             </div>
         </div>
         </>
