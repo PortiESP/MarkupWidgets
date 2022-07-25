@@ -3,7 +3,7 @@ import sass, {carousel as className} from "./styles/carousel.module.scss"
 
 export default function Carousel(props){
 
-    const [currentCard, setCurrentCard] = useState(4)
+    const [currentCard, setCurrentCard] = useState(props.default || 0)
 
     const getPos = center => [ (center) ? center-1: props.cards.length-1, (center+1) % props.cards.length ];
     const [leftCard, rightCard] = getPos(currentCard) 

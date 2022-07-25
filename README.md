@@ -626,6 +626,7 @@ The content carousel will display an infinite number of contents as cards, 3 car
 > ### **Props**
 > - `cards` - Array where each index holds the content of one card
 > - `callback` - This function will be called when the usesr clicks the central card
+> - `default` - Index of the card that will be show in the center
 > - `spacing` - This value detemine the distance between the side cards and the center (*use units*)
 > - `duration` - Duration of the spinning animation
 > - `style` - Styles object

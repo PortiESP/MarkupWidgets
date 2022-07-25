@@ -10,15 +10,15 @@
 
 .div__cards_wrap{
     position: relative;
-    min-height: 300px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 50px 15px;
 
     .div__card{
         position: absolute;
         width: 30%;
-        height: 200px;
+        min-height: 200px;
+        align-self: center;
         
         background-color: $gray;
         border-radius: 10px;
@@ -28,24 +28,25 @@
         --duration: .5s;
         --backBrightness: 70%;
 
-        &.div__card{
-            z-index: -1;
-            filter: brightness(var(--backBrightness));
-            transform: translateX(0);
-            opacity: 0;
-            transition: all var(--duration) ease;
-        }
-        &.div__card.left{
+        z-index: -1;
+        filter: brightness(var(--backBrightness));
+        transform: translateX(0);
+        opacity: 0;
+        transition: all var(--duration) ease;
+        
+        &.left{
             transform: translateX(calc(var(--spacing) * -1));
             opacity: 1;
             z-index: 1;
         }
-        &.div__card.right{
+        &.right{
             transform: translateX(var(--spacing));
             opacity: 1;
             z-index: 2;
         }
-        &.div__card.currentCard{
+        &.currentCard{   
+            position: relative;
+            left: 10px;
             transform: scale(120%);
             filter: none;
             opacity: 1;
