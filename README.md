@@ -182,6 +182,7 @@ const myArray = {
   - [`Button`](#button)
   - [`Toggle`](#toggle)
   - [`Carousel`](#carousel)
+  - [`Block`](#block)
 
 
 ## Title
@@ -648,3 +649,22 @@ The content carousel will display an infinite number of contents as cards, 3 car
 ```
 
 ![Carousel screenshoot](https://i.gyazo.com/eea44e2fba65056d98d872de379585dd.png "Carousel screenshoot")
+
+
+## Block
+
+This widget is really simple, it just wraps content in a box to diferenciate from the code around
+
+> ### **Props**
+> - `background` - Background of the block
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+
+```js
+ <Tags.Block>
+    <Tags.UList items={["Item 1", "Item 2", "Item 3", "Item 4"]}/>
+    <Tags.Img img="/example1.jpg" height="300px" width="500px" alt="Alt text" caption="Enviorement"/>
+</Tags.Block>
+```
+
+![Block screenshoot](https://i.gyazo.com/9c0f2719368abf3ccee472c50d8ba654.png "Block screenshoot") 
