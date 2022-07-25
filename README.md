@@ -593,9 +593,9 @@ This widget can expand to show more content
 > - `background` - Background of the container
 > - `backgroundHover` - Background of the header when hover
 > - `arrowColor` - Color of the toggle arrow
-> - `arrowSize` - size of the toggle arrow
+> - `arrowSize` - size of the toggle arrow (*use units*)
 > - `color` - Color of the title text
-> - `fontSize` - Font size of the title
+> - `fontSize` - Font size of the title (*use units*)
 > - `style` - Styles wrapper object
 > - `id` - Add an ID attribute
 
