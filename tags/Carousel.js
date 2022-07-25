@@ -19,6 +19,13 @@ export default function Carousel(props){
 
     return (
         <>
+        <style jsx="true">{`
+            .${sass.div__card}{
+                ${props.spacing && `--spacing: ${props.spacing};`}
+                ${props.duration && `--duration: ${props.duration};`}
+                ${props.backBrightness && `--backBrightness: ${props.backBrightness};`}
+            }
+        `}</style>
         <div className={className} style={props.style} id={props.id}>
             <div className={sass.div__cards_wrap}>
 
