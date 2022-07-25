@@ -19,7 +19,7 @@
         position: absolute;
         width: 30%;
         height: 200px;
-        margin: 0 20px;
+        
         background-color: $gray;
         border-radius: 10px;
         box-shadow: 0 0 10px 0 black;
@@ -113,3 +113,34 @@
     }
 }
 
+
+
+@media (max-width: 600px){
+
+    .carousel{
+        & .div__cards_wrap{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        & .div__card{
+            transform: none;
+            width: 70%;
+            // background-color: red;
+            &.div__card.left{
+                transform: translateX(-120%);
+                opacity: 0;
+            }
+            &.div__card.right{
+                transform: translateX(120%);
+                opacity: 0;
+            }
+            
+            & .currentCard{
+                transform: none;
+                width: 100%;
+            }
+        }
+
+    }
+}
