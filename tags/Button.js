@@ -1,7 +1,14 @@
 import sass, {button_wrap as className} from "./styles/button.module.scss"
 import Image from "next/image"
+import Link from "next/link"
+import { Router, useRouter } from "next/router"
 
 export default function Button(props){
+     const router = useRouter()
+
+    function gotoHref(){
+        router.push(props.href)
+    }
 
     return (
         <>
@@ -27,8 +34,7 @@ export default function Button(props){
                 }
 
             `}</style>
-
-            <div className={className} style={props.style} id={props.id} onClick={props.callback}>
+            <div className={className} style={props.style} id={props.id} onClick={props.callback || props.href && gotoHref}>
                 
                 <div className={sass.button} style={props.styleButton}>
                     { props.icon && 

@@ -540,6 +540,7 @@ text is **not** passed as a wrapped child the prop text must be passed
 > - `icon` - This props receives an image as an object from an `import` statement
 > - `id` - Add an ID attribute to the widget
 > - `callback` - Callback function triggered when the button is clicked
+> - `href` - URL to navigate when the button is clicked
 > 
 > *Button*
 > 
