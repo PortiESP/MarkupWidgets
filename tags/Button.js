@@ -6,6 +6,7 @@ import { Router, useRouter } from "next/router"
 export default function Button(props){
      const router = useRouter()
 
+
     function gotoHref(){
         router.push(props.href)
     }
@@ -34,7 +35,7 @@ export default function Button(props){
                 }
 
             `}</style>
-            <div className={className} style={props.style} id={props.id} onClick={props.callback || props.href && gotoHref}>
+            <div className={`${className} ${props.mini && sass.mini}`} style={props.style} id={props.id} onClick={props.callback || props.href && gotoHref}>
                 
                 <div className={sass.button} style={props.styleButton}>
                     { props.icon && 
@@ -42,9 +43,12 @@ export default function Button(props){
                         <Image src={props.icon} alt="Button icon" layout="fill" objectFit="contain"/>
                     </div>
                     }
-                    <div className={sass.div__text} style={props.styleText}>
-                        <span>{props.children || props.text}</span>
-                    </div>
+                    {
+                        props.mini && props.icon ? "": 
+                        <div className={sass.div__text} style={props.styleText}>
+                            <span>{props.children || props.text}</span>
+                        </div>
+                    }
                 </div>
             </div>
         </>

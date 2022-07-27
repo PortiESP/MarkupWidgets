@@ -35,3 +35,18 @@
         font-weight: 600;
     }
 }
+
+
+.button_wrap.mini{
+    overflow: hidden;
+    max-width: 70px;
+    padding: 0;
+    & .button{
+        border-radius: 50%;
+    }
+    & .div__image{
+        margin: 0;
+        width: 30px;
+        height: 30px;
+    }
+}
