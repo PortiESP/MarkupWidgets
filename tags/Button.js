@@ -15,22 +15,22 @@ export default function Button(props){
             <style jsx="true">{`
 
                 .${sass.button}{
-                    ${props.borderRadius && `border-radius: ${props.borderRadius};`}
-                    ${props.background && `background: ${props.background};`}
+                    ${props.borderRadius && `border-radius: ${props.borderRadius};` || ""}
+                    ${props.background && `background: ${props.background};` || ""}
                 }
 
                 .${sass.button}:hover{${props.styleHover}}
                 .${sass.button}:active{${props.styleActive}}
                 
                 .${sass.div__image}{
-                    ${props.iconScale && `transform: scale(${props.iconScale});`}
-                    ${props.iconInvert && `filter: invert(${props.iconInvert});`}
-                    ${props.iconBackground && `background: ${props.iconBackground};`}
+                    ${props.iconScale && `transform: scale(${props.iconScale});` || ""}
+                    ${props.iconInvert && `filter: invert(${props.iconInvert});` || ""}
+                    ${props.iconBackground && `background: ${props.iconBackground};` || ""}
                 }
 
                 .${sass.div__text}{
-                    ${props.fontSize && `font-size: ${props.fontSize};`}
-                    ${props.color && `color: ${props.color};`}
+                    ${props.fontSize && `font-size: ${props.fontSize};` || ""}
+                    ${props.color && `color: ${props.color};` || ""}
                 }
 
             `}</style>
