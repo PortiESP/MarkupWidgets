@@ -4,6 +4,7 @@
 .carousel{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .div__cards_wrap{
@@ -16,13 +17,15 @@
 
     .div__card{
         position: absolute;
-        width: 30%;
+        // width: 30%;
         min-height: 200px;
         align-self: center;
+        padding: 15px;
         
         background-color: $gray;
         border-radius: 10px;
         box-shadow: 0 0 10px 0 black;
+        overflow: hidden;
         
         --spacing: 80%;
         --duration: .5s;
@@ -61,6 +64,7 @@
 }
 
 .div__bubbles{
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
