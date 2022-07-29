@@ -27,9 +27,10 @@
         box-shadow: 0 0 10px 0 black;
         overflow: hidden;
         
-        --spacing: 80%;
+        --spacing: 60%;
         --duration: .5s;
         --backBrightness: 70%;
+        --shrink: 60%;
 
         z-index: -1;
         filter: brightness(var(--backBrightness));
@@ -38,19 +39,18 @@
         transition: all var(--duration) ease;
         
         &.left{
-            transform: translateX(calc(var(--spacing) * -1));
+            transform: translateX(calc(var(--spacing) * -1)) scale(var(--shrink));
             opacity: 1;
             z-index: 1;
         }
         &.right{
-            transform: translateX(var(--spacing));
+            transform: translateX(var(--spacing)) scale(var(--shrink));
             opacity: 1;
             z-index: 2;
         }
         &.currentCard{   
             position: relative;
             left: 10px;
-            transform: scale(120%);
             filter: none;
             opacity: 1;
             z-index: 3;            
