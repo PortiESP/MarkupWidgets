@@ -40,6 +40,8 @@
     & .div__zoomImage{
         position: relative;
         margin: 10px;
+        max-width: 90vw;
+        max-height: 90vh;
     }
     & span{
         font-family: $font1;
