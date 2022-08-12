@@ -3,13 +3,14 @@
 .image{
     margin: auto;
     padding: 20px;
-    // width: 80%;
+    min-height: 200px;
     position: relative;
     display: flex;
     justify-content: center;
     justify-items: center;
     position: relative;
     border-radius: 10px;
+
     
     & img{
         border-radius: 10px;
@@ -40,8 +41,8 @@
     & .div__zoomImage{
         position: relative;
         margin: 10px;
-        max-width: 90vw;
-        max-height: 90vh;
+        width: 90vw;
+        height: 90vh;
     }
     & span{
         font-family: $font1;
