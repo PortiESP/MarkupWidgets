@@ -46,11 +46,39 @@
 
         transition: all .1s ease;
 
+        & .span__tip{
+            padding: 0;
+            display: inline-block;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            transform: rotate(45deg);
+            font-size: 2.2rem;
+            background-color: #3338;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 45px;
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            cursor: pointer;
+
+            
+            
+        }
         &:hover{
             background: #000a;
+            & .span__tip{
+                opacity: .6;
+                &:hover{
+                    opacity: 1;
+                }
+            }
         }
     }
-    & span{
+    & > span{
         font-family: $font1;
         font-size: 1.1rem;
         font-weight: 300;
@@ -59,6 +87,8 @@
         border-radius: 10px;
         color: #aaa;
     }
+
+    
 }
 
 @media (max-width:600px){
@@ -67,5 +97,8 @@
     }
     .div__zoomImage{
         background: #000a;
+    }
+    .span__tip{
+        opacity: .5;
     }
 }

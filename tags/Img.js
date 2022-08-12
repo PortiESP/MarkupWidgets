@@ -32,8 +32,9 @@ export default function Img(props){
             {
                 zoom &&
                 <div className={sass.div__zoom_wrap} onClick={ e => e.target.className === sass.div__zoom_wrap && setZoom(false)}>
-                    <div className={sass.div__zoomImage} onClick={ () => props.href && router.push(props.href)}>
-                        <Image src={props.img} alt={props.alt} layout="fill" objectFit="contain"/>
+                    <div className={sass.div__zoomImage}>
+                        <Image src={props.img} alt={props.alt} layout="fill" objectFit="contain" onClick={ () => props.href && router.push(props.href) }/>
+                        <span className={sass.span__tip} onClick={()=> setZoom(false)}><span>+</span></span>
                     </div>
                     { props.hideCaption || !props.caption || <span><i>{props.title || props.alt}</i></span> }
                     
