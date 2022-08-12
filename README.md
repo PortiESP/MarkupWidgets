@@ -659,6 +659,7 @@ This widget is really simple, it just wraps content in a box to diferenciate fro
 
 > ### **Props**
 > - `background` - Background of the block
+> - `bulletColor` - Item bullet color
 > - `style` - Styles object
 > - `id` - Add an ID attribute
 
