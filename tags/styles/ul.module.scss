@@ -8,6 +8,8 @@
     padding-left: 40px;
     list-style:none;
 
+    --bulletColor:gray;
+
     & li{
         position: relative;
     }
@@ -21,7 +23,7 @@
         display: inline-block;
         width: 12px;
         height: 12px;
-        background-color: rgb(70, 70, 70);
+        background: var(--bulletColor);
         border-radius: 50%;
     }
 }
