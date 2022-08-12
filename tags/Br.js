@@ -4,7 +4,7 @@ import {br} from "./styles/br.module.scss"
 
 export default function Br(props){
     return (
-        <div className={br} style={{height: props.height || "50px"}} id={props.id}>
+        <div className={br} style={{height: props.spacing && `${props.spacing}px` || "50px"}} id={props.id}>
             <br />
         </div>
     )

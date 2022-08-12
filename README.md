@@ -508,7 +508,7 @@ Creates a simple horizontal line to divide content, it can also take parameter `
 Just a line break, it can take the prope `large` to get a larger space
 
 > ### **Props**
-> - `height` - Space height (*use units*)
+> - `spacing` - Space height (*px*)
 > - `id` - Add an ID attribute
 
 ```js
