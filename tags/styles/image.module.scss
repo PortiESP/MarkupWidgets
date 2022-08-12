@@ -97,8 +97,9 @@
     }
     .div__zoomImage{
         background: #000a;
-    }
-    .span__tip{
-        opacity: .5;
+        
+        & .span__tip{
+            opacity: .5;
+        }
     }
 }
