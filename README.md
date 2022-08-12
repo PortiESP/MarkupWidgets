@@ -177,7 +177,6 @@ const myArray = {
   - [`Quote`](#quote)
   - [`Colors`](#colors)
   - [`Hr`](#hr)
-  - [`Br`](#br)
   - [`italic`/`bold`](#italic--bold-styles)
   - [`Button`](#button)
   - [`Toggle`](#toggle)
@@ -502,19 +501,6 @@ Creates a simple horizontal line to divide content, it can also take parameter `
 ![Hr small screenshoot](https://i.gyazo.com/58e556350c525804faf2f9aacd5f78c2.png "Hr small screenshoot")
 
 
-
-## Br
-
-Just a line break, it can take the prope `large` to get a larger space
-
-> ### **Props**
-> - `spacing` - Space height (*px*)
-> - `id` - Add an ID attribute
-
-```js
-<Br />
-<Br large/>
-```
 
 ## Italic & Bold styles
 

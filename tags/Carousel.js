@@ -9,7 +9,6 @@ export default function Carousel(props){
     const [leftCard, rightCard] = getPos(currentCard) 
 
     function cardClickHandler(index){
-        // console.log(index)
         index===currentCard && props.callback && props.callback(currentCard)
         index===leftCard && setCurrentCard(leftCard)
         index===rightCard && setCurrentCard(rightCard)
