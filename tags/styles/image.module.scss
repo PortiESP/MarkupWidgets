@@ -42,12 +42,19 @@
         margin: 10px;
         width: 90vw;
         height: 90vh;
+        border-radius: 20px;
+
+        transition: all .1s ease;
+
+        &:hover{
+            background: #000a;
+        }
     }
     & span{
         font-family: $font1;
         font-size: 1.1rem;
         font-weight: 300;
-        background-color: #3338;
+        background-color: #333;
         padding: 4px 10px;
         border-radius: 10px;
         color: #aaa;
@@ -57,5 +64,8 @@
 @media (max-width:600px){
     .image{
         padding: 4px;
+    }
+    .div__zoomImage{
+        background: #000a;
     }
 }
