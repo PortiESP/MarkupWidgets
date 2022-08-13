@@ -31,8 +31,8 @@ export default function Toggle(props){
             {
                 showContent && 
                 <div className={sass.div__content}>
-                {props.children}
-            </div>
+                    {props.children}
+                </div>
             }
         </div>
         </>
