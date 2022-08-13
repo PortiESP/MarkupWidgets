@@ -32,10 +32,11 @@
     .ulist{
         padding: 4px 0;
         padding-left: 30px;
-        font-size: 1rem;     
+        font-size: 1em;     
         
         & li {
             padding: 6px 0;
+            
         }
         & li::before{
             left: -20px;
