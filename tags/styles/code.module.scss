@@ -6,16 +6,17 @@
     background-color: $secondaryBg;
     border-radius: 5px;
     margin: 10px 0;
-    padding: 10px;
+    padding: 30px;
+
     width: 100%;
     
     overflow: hidden;
 
-    & pre{
+    & .pre__code{
         font-family: monospace;
         font-size: 1rem;
+        padding: 10px 0;
         font-weight: 200;
-        padding: 30px;
         overflow-x: scroll;
         text-align: start;
 
@@ -72,6 +73,36 @@
             animation: showCopied 2.5s forwards;
         }
     }
+
+    & .div__output{
+        position: relative;
+        padding: 10px 0;
+
+        & .pre__output{
+            padding: 10px;
+            color: #888;
+            background: #3364;
+            border-radius: 5px;
+            
+        }
+
+        & > span{
+            position: absolute;
+            top: 20px;
+            right: 12px;
+            color: #666;
+            font-style: italic;
+            font-size: .8em;
+            opacity: 0;
+
+        }
+
+        &:hover > span{
+            opacity: 1;
+        }
+    }
+
+
     @keyframes showCopied {
         from{
             display: inline-block;

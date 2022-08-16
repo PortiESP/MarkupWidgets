@@ -301,8 +301,9 @@ There are also 3 decorative buttons at the *top-right* corder, this buttons are 
 
 > ### **Props**
 > - `inline` - Flag for code string
->   - `color` - Color for the inline code
+> - `color` - Color for the inline code
 > - `caption` - Add a caption text for the code snippet
+> - `output` - Add an nested div to print some kind of command output
 > - `text` - Text content
 > - `style` - Styles object
 > - `id` - Add an ID attribute

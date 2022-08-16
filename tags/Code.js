@@ -1,4 +1,4 @@
-import {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation, inlineCode, caption} from "./styles/code.module.scss"
+import sass, {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation, inlineCode, caption} from "./styles/code.module.scss"
 import {useRef, useState} from "react"
 
 
@@ -19,19 +19,31 @@ export default function Code(props){
     }
 
     return (
-        <div className={className} style={props.style} id={props.id}>
-            <pre ref={$refText}>{props.children || props.text}</pre>
+        <div className={sass.code} style={props.style} id={props.id}>
+            <pre ref={$refText} className={sass.pre__code}>
+                {props.children || props.text}
+            </pre>
 
-            <div className={codeBtns}>
-                <div className="btnRed" />
-                <div className="btnOrange" />
-                <div className="btnGreen" />
+            {
+                props.output && (
+                    <div className={sass.div__output}>
+                        <pre className={sass.pre__output}>{props.output}</pre>
+                        <span>Output</span>
+                    </div>
+                )
+
+            }
+
+            <div className={sass.codeBtns}>
+                <div className={sass.btnRed} />
+                <div className={sass.btnOrange} />
+                <div className={sass.btnGreen} />
             </div>
-            <div className={codeCopy} onClick={copy}/>
-            <span className={[codeCopied, showCopied?codeCopiedAnimation:""].join(" ")}>Copied to clipboard...</span>
+            <div className={sass.codeCopy} onClick={copy}/>
+            <span className={[sass.codeCopied, showCopied ? sass.codeCopiedAnimation : ""].join(" ")}>Copied to clipboard...</span>
             { 
                     props.caption ?
-                    <div className={caption}>
+                    <div className={sass.caption}>
                         <span>{props.caption}</span>
                     </div>:
                     ""
