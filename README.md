@@ -182,6 +182,7 @@ const myArray = {
   - [`Toggle`](#toggle)
   - [`Carousel`](#carousel)
   - [`Block`](#block)
+  - [`Url`](#url)
 
 
 ## Title
@@ -658,3 +659,23 @@ This widget is really simple, it just wraps content in a box to diferenciate fro
 ```
 
 ![Block screenshoot](https://i.gyazo.com/9c0f2719368abf3ccee472c50d8ba654.png "Block screenshoot") 
+
+
+## Url
+
+This widget takes and url and a few information to create a card to make the URL stand out, this widgets will show a title, description, url and a screenshoot of the URL
+
+> ### **Props**
+> - `src` - URL we want to embed
+> - `title` - Title for the URL card
+> - `description` - Description of the URL content
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+
+
+```js
+<Tags.Url src="https://porti.dev/" title="My personal site" description="An online portfolio and blog where I show my skills"/>
+```
+
+![URL screenshoot](https://i.gyazo.com/6021c453b05f43160b5e9f525e4bd857.png "URL screenshoot")
+
