@@ -2,24 +2,32 @@
 
 .title, .title2, .title3, .title4{
     color: $white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+
+    background: #333;
+    border-radius: 10px;
+
 }
 
 .title{
-    padding: 10px 0;
     font-size: 3.6rem;
+    padding: 20px;
+    margin-bottom: 40px;
+
+    background: none;
     border-bottom: 2px solid gray;
-    margin-bottom: 20px;
+    border-radius: 0;
 }
 .title2{
-    padding: 20px 0;
     font-size: 2.8rem;
 }
 .title3{
-    padding: 15px 0;
+    padding: 15px;
     font-size: 2rem;
 }
 .title4{
-    padding: 8px 0;
+    padding: 8px;
     font-size: 1.5rem;
 }
 
