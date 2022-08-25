@@ -13,7 +13,7 @@ export default function PageTransitionEvent(props){
             <div className={sass.div__pagelabel_data}>
                 <h3>{props.title}</h3>
                 <hr/>
-                <p>{props.description}</p>
+                { props.description && <p>{props.description}</p> }
             </div>
             {
                 props.img &&
@@ -27,7 +27,7 @@ export default function PageTransitionEvent(props){
             showPage &&
             <div className={sass.div__page_wrap} onClick={ e => e.target.className === sass.div__page_wrap && setShowPage(false)}>
                 <div className={sass.div__page_content}>
-                    <span className={sass.span__page_close} onClick={ ()=> setShowPage(false)}><span>+</span></span>
+                    <span className={sass.span__page_close} onClick={ ()=> setShowPage(false)}><span>Close</span></span>
                     {props.children}
                 </div>
             </div>
