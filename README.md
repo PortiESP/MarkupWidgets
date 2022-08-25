@@ -703,5 +703,6 @@ This widget can hold content and display it as a popup on click event
 </Tags.Page>
 ```
 
-![Page screenshoot](https://i.gyazo.com/6021c453b05f43160b5e9f525e4bd857.png "Page screenshoot")
+![Page screenshoot](https://i.gyazo.com/244073869b78ed34d398c7fda30b71e2.png "Page screenshoot")
+![Page small screenshoot](https://i.gyazo.com/9212fe8ebfd4f244118a08575253df2d.png "Page small screenshoot")
 
