@@ -2,7 +2,7 @@ import { useState } from "react"
 import Image from "next/image"
 import sass from "./styles/page.module.scss"
 
-// props: title, description, img, alt, embed, style, id
+// props: title, description, style, id
 export default function PageTransitionEvent(props){
 
     const [showPage, setShowPage] = useState(false)
@@ -17,12 +17,9 @@ export default function PageTransitionEvent(props){
             </div>
             {
                 props.img &&
-                <div className={sass.div__pagelabel_img}>
-                <span className={sass.span__pagelabel_img}>
-                    
-                    <Image src={props.img} alt={props.alt || "Image not found"}  />
-                </span>
-            </div>
+                <div className={sass.div__pagelabel_preview}>
+                    {props.children}
+                </div>
             }
         </div>
 
@@ -31,7 +28,7 @@ export default function PageTransitionEvent(props){
             <div className={sass.div__page_wrap} onClick={ e => e.target.className === sass.div__page_wrap && setShowPage(false)}>
                 <div className={sass.div__page_content}>
                     <span className={sass.span__page_close} onClick={ ()=> setShowPage(false)}><span>+</span></span>
-                    {props.children || props.embed}
+                    {props.children}
                 </div>
             </div>
         }
