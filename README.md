@@ -3,7 +3,7 @@
 
 The MarkupWidgets module is a packet of React components (widgets) that provides more tags for building web pages that the programmer can use as default but also customize the base component.
 
-[*Go to widgets*](#widgets-list)
+[*Go to widgets*](#widgets-list-📜)
 
 ### Features
 
@@ -219,6 +219,7 @@ There are 4 types of titles/headings: *h1, h2, h3, h4* as *Title1, Title2, ...*
 
 ![Title example screenshoot](https://i.gyazo.com/ea1a204167804e222618fe92d15b6352.png "Title example screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Paragraph
 
@@ -242,6 +243,7 @@ Clasic paragraph to write text, also we can write special characters by adding t
 
 ![Paragraph example screenshoot](https://i.gyazo.com/dac24341490b8f99f7b0009c0c0754a7.png  "Paragraph example screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Link
 
@@ -260,6 +262,7 @@ Lorem Ipsum <Tags.Link href="www.example.com">Link text</Tags.Link> de relleno.
 
 ![Link example screenshoot](https://i.gyazo.com/5fe3c4fb4c6119ea9423ac9643602622.png  "Link example screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Img
 
@@ -294,6 +297,7 @@ import testImg from "./exampleImage.jpg"
 
 ![Img example screenshoot](https://i.gyazo.com/a3ef41ebe0be29818230b3b2791d4381.png  "Img example screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Code
 
@@ -347,7 +351,7 @@ This is some content <Tags.Code inline color="#ab124F">npm install react</Tags.C
 ![Code2 example screenshoot](https://i.gyazo.com/ca52db55395134fae205865957169e7e.png  "Code2 example screenshoot")
 ![Inline code example screenshoot](https://i.gyazo.com/ddeaea6b199729d98eaddeab84b1b538.png  "Inline code example screenshoot")
 
-
+[*Go to widgets*](#widgets-list-📜)
 
 ## UList
 
@@ -365,6 +369,7 @@ This widget take an array as a prop to generate the list
 
 ![UList example screenshoot](https://i.gyazo.com/b8006621f16f9438a8a6131177935b6b.png  "UList example screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Callout
 
@@ -403,6 +408,8 @@ This widget can take 3 styles:
 ![Callout example screenshoot](https://i.gyazo.com/dcd5e748b3ede14a40ae3cae11ae3ede.png  "Custom callout example screenshoot")
 ![Callout example screenshoot](https://i.gyazo.com/106ef547673da2507483068a098f4469.png "Danger example screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
+
 ## Quote
 
 > ### **Props**
@@ -424,6 +431,7 @@ Quote block, colors can be personalized with the `style` props
 
 ![Quote example screenshoot](https://i.gyazo.com/0147ed02d39c1cc7b0bee2cba7cc8341.png  "Quote example screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Colors
 
@@ -484,7 +492,7 @@ Lets colour the <C color="rgb(127, 255, 212)">example</C> text
 
 ![Code syntax screenshoot](https://i.gyazo.com/793b7d79515a6d87a61456df13b547e4.png "Colors example syntax screenshoot")
 
-
+[*Go to widgets*](#widgets-list-📜)
 
 ## Hr
 
@@ -503,7 +511,7 @@ Creates a simple horizontal line to divide content, it can also take parameter `
 ![Hr screenshoot](https://i.gyazo.com/01e94914817f97017c3cd23c2f4f4399.png "Hr screenshoot")
 ![Hr small screenshoot](https://i.gyazo.com/58e556350c525804faf2f9aacd5f78c2.png "Hr small screenshoot")
 
-
+[*Go to widgets*](#widgets-list-📜)
 
 ## Italic & Bold styles
 
@@ -513,6 +521,8 @@ To apply *italic* or *bold* styles to some text you can add it as you will do in
     This is an <i>italic</i> word
 </Paragraph>
 ```
+
+[*Go to widgets*](#widgets-list-📜)
 
 ## Button
 
@@ -575,6 +585,7 @@ import icon from "./myIcon.png"
 
 ```
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Toggle
 
@@ -608,6 +619,7 @@ This widget can expand to show more content
 ![Toggle screenshoot](https://i.gyazo.com/0830c1813eabefd9da15bcba21870513.png "Toggle screenshoot")
 ![Toggle screenshoot](https://i.gyazo.com/20e234fd89847e9ce8aa3eb9db86daae.png "Toggle screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Carousel
 
@@ -641,6 +653,7 @@ The content carousel will display an infinite number of contents as cards, 3 car
 
 ![Carousel screenshoot](https://i.gyazo.com/eea44e2fba65056d98d872de379585dd.png "Carousel screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Block
 
@@ -661,6 +674,7 @@ This widget is really simple, it just wraps content in a box to diferenciate fro
 
 ![Block screenshoot](https://i.gyazo.com/9c0f2719368abf3ccee472c50d8ba654.png "Block screenshoot") 
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Url
 
@@ -680,6 +694,7 @@ This widget takes and url and a few information to create a card to make the URL
 
 ![URL screenshoot](https://i.gyazo.com/6021c453b05f43160b5e9f525e4bd857.png "URL screenshoot")
 
+[*Go to widgets*](#widgets-list-📜)
 
 ## Page
 
