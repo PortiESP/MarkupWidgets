@@ -4,12 +4,14 @@
 .div__pagelabel_wrap{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 10px;
 
     background-color: #222;
     color: #eee;
     border-radius: 10px;
     font-size: 1rem;
-    padding: 20px;
     overflow: hidden;
     border: 1px solid #555;
 
@@ -22,13 +24,65 @@
         & .div__pagelabel_preview::-webkit-scrollbar-thumb{
             border-color: #444;
         }
+
+    }
+    &.small{
+        font-size: .8rem;
+        padding: 12px;
+        height: 60px;
+        justify-content: flex-start;
+        align-items: center;
+
+        & .div__pagelabel_icon{
+            width: 40px;
+            height: 40px;
+            margin: 0px;
+
+        }
+
+        & .div__pagelabel_data{
+            display: flex;
+            align-items: center;
+            gap:10px;
+            height: 100%;
+            white-space: nowrap;
+            width: 90%;
+
+            & h3{
+                padding:0 20px;
+                margin:0 10px;
+                border-right: 2px solid #aaa2;
+                border-left: 2px solid #aaa2;
+            }
+            & p{
+                overflow: hidden;
+                width: 100%;
+            }
+            
+        }
+    }
+
+    & .div__pagelabel_icon{
+        background-color: #333;
+        padding: 8px;
+        margin: 0 20px;
+        border-radius: 10px;
+        width: 70px;
     }
     
     & .div__pagelabel_data{
-        width: 100%;
+        width: 50%;
+        height: 100%;
+        margin-right: 20px;
+        font-size: .8rem;
+        padding: 10px 0;
+        overflow: hidden;
         
         & h3{
             font-size: 2em;
+            margin: 0;
+            padding: 0;
+            line-height: 20px;
             padding-bottom: 4px;
         }
         & hr{
@@ -39,13 +93,14 @@
         }
         & p{
             color: #aaa;
+            font-size: 1em;
         }
     }
 
     & .div__pagelabel_preview{
         position: relative;
         max-width: 30%;
-        max-height: 200px;
+        max-height: 100%;
         // transform: scale(50%);
         font-size: .5rem;
 

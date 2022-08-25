@@ -1,22 +1,26 @@
 import { useState } from "react"
 import Image from "next/image"
 import sass from "./styles/page.module.scss"
+import docsIcon from "../assets/icons/docs.png"
 
-// props: title, description, style, id
+// props: title, description, style, id, small, disable
 export default function PageTransitionEvent(props){
 
     const [showPage, setShowPage] = useState(false)
 
     return (
         <>
-        <div className={sass.div__pagelabel_wrap} onClick={ ()=> setShowPage(true)} id={props.id} style={props.style}>
+        <div className={[sass.div__pagelabel_wrap, props.small && sass.small].join(" ")} onClick={ ()=> setShowPage(true)} id={props.id} style={props.style}>
+            <div className={sass.div__pagelabel_icon}>
+                <Image src={docsIcon} alt="Docs icon" objectFit="contain"/>
+            </div>
             <div className={sass.div__pagelabel_data}>
                 <h3>{props.title}</h3>
                 <hr/>
                 { props.description && <p>{props.description}</p> }
             </div>
             {
-                props.img &&
+                !props.small &&
                 <div className={sass.div__pagelabel_preview}>
                     {props.children}
                 </div>

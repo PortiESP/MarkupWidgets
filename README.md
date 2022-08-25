@@ -183,6 +183,7 @@ const myArray = {
   - [`Carousel`](#carousel)
   - [`Block`](#block)
   - [`Url`](#url)
+  - [`Page`](#page)
 
 
 ## Title
@@ -678,4 +679,29 @@ This widget takes and url and a few information to create a card to make the URL
 ```
 
 ![URL screenshoot](https://i.gyazo.com/6021c453b05f43160b5e9f525e4bd857.png "URL screenshoot")
+
+
+## Page
+
+This widget can hold content and display it as a popup on click event
+
+// --------------- Docs, disable preview
+
+> ### **Props**
+> - `title` - Title for the page card
+> - `description` - Description of the page content
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+> - `small` - Smmaller version of the widget without preview
+
+
+```js
+<Tags.Page title="Test page" description="Template description" small>
+                <h1>gg</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+</Tags.Page>
+```
+
+![Page screenshoot](https://i.gyazo.com/6021c453b05f43160b5e9f525e4bd857.png "Page screenshoot")
 
