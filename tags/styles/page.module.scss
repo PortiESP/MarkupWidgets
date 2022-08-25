@@ -1,0 +1,132 @@
+@import "./global";
+
+
+.div__pagelabel_wrap{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #222;
+    color: #eee;
+    border-radius: 10px;
+    font-size: 1rem;
+    overflow: hidden;
+    border: 1px solid #555;
+
+    &:hover{
+        background: #444;
+    }
+    
+    & .div__pagelabel_data{
+        padding: 20px;
+        width: 100%;
+        
+        & h3{
+            font-size: 2em;
+            padding-bottom: 4px;
+        }
+        & hr{
+            height: 1px;
+            background-color: #fff2;
+            border: none;
+            margin: 8px 0;
+        }
+        & p{
+            color: #aaa;
+        }
+    }
+
+    & .div__pagelabel_img{
+        position: relative;
+        // width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+        
+        
+        & img{
+            max-height: 200px;
+            border-radius: 4px;
+        }
+    }
+    
+}
+
+
+.div__page_wrap{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #0004;
+    z-index: 5;
+    overflow: hidden;
+
+}
+
+.div__page_content{
+    position: relative;
+    width: 95vw;
+    max-width: 1000px;
+    height: 90vh;
+
+    background: #666;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0008;
+    color: #eee;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    &::-webkit-scrollbar{
+        width: 30px;
+    }
+    &::-webkit-scrollbar-track{
+        background: #666;
+        border-radius: 20px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #3334;
+        border-radius: 20px;
+        border: 10px solid #666;
+    }
+
+}
+
+.span__page_close{
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 40px;
+    height: 40px;
+
+    background-color: #8888;
+    border-radius: 50%;
+    color: #aaa;
+    font-size: 2.5rem;
+    cursor: pointer;
+
+    & > span{
+        width: 40px;
+        height: 100px;
+        line-height: 92px;
+        font-weight: 700;
+        transform: rotate(45deg);
+        text-align: center;
+    }
+
+    &:hover{
+        color: #eee;
+        background: #333;
+    }
+}
