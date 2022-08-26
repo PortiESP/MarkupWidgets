@@ -7,4 +7,54 @@
     width: 100%;
 
     aspect-ratio: 16/9;
+
+    &:hover{
+        & .span__caption{
+            opacity: 1;
+        }
+    }
+}
+
+.span__caption{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #444a;
+    color: #eee;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 300;
+    font-size: .9em;
+    font-style: italic;
+    
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+
+// Zoomed image
+.div__zoom_wrap{
+    position: fixed;
+    top:0;left:0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #000d;
+
+    z-index: 10;
+
+    & .div__zoom_image{
+        position: relative;
+        width: 90%;
+        aspect-ratio: 16/9;
+
+        & .span__caption{
+            opacity: 1;
+        }
+    }
 }

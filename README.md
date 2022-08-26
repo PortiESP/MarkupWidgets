@@ -277,8 +277,7 @@ Display an image, this component can be used in 3 diferent ways based on the pro
 > - `img` - Image object/path
 > - `alt` - Alt text
 > - `title` - Add a *title* attribute
-> - `width` - Width of the image
-> - `height` - Height of the image
+> - `ratio` - Aspect ratio of the image (default 16/9)
 > - `hideCaption` - Hides the caption text shown when clicking the image
 > - `style` - Styles object
 > - `id` - Add an ID attribute
