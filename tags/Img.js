@@ -13,11 +13,11 @@ export default function Img(props){
         setImg( 
             typeof props.img === "string" ?
                 props.height && props.width ?
-                    <Image src={props.img} alt={props.alt} height={props.height} width={props.width} objectFit="contain"/>
+                    <Image src={props.img} alt={props.alt || props.title} height={props.height} width={props.width} objectFit="contain"/>
                     :
-                    <Image src={props.img} alt={props.alt} layout="fill" objectFit="contain"/>
+                    <Image src={props.img} alt={props.alt || props.title} layout="fill" objectFit="contain"/>
                 :
-                <Image src={props.img} alt={props.alt} {...props.img} objectFit="contain"/>
+                <Image src={props.img} alt={props.alt || props.title} {...props.img} objectFit="contain"/>
         )
 
 
@@ -33,7 +33,7 @@ export default function Img(props){
                 zoom &&
                 <div className={sass.div__zoom_wrap} onClick={ e => e.target.className === sass.div__zoom_wrap && setZoom(false)}>
                     <div className={sass.div__zoomImage}>
-                        <Image src={props.img} alt={props.alt} layout="fill" objectFit="contain" onClick={ () => props.href && router.push(props.href) }/>
+                        <Image src={props.img} alt={props.alt || props.title} layout="fill" objectFit="contain" onClick={ () => props.href && router.push(props.href) }/>
                         <span className={sass.span__tip} onClick={()=> setZoom(false)}><span>+</span></span>
                     </div>
                     { props.hideCaption || !props.title || <span><i>{props.title || props.alt}</i></span> }
