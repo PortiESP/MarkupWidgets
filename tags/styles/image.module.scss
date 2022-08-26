@@ -51,11 +51,12 @@
     & .div__zoom_image{
         position: relative;
         width: 90%;
+        max-height: 90vh;
         aspect-ratio: 16/9;
 
         & .span__caption{
             white-space: nowrap;
-            bottom: -80px;
+            bottom: -20px;
             opacity: .7;
         }
     }
