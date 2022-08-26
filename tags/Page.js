@@ -32,6 +32,7 @@ export default function PageTransitionEvent(props){
             <div className={sass.div__page_wrap} onClick={ e => e.target.className === sass.div__page_wrap && setShowPage(false)}>
                 <div className={sass.div__page_content}>
                     <span className={sass.span__page_close} onClick={ ()=> setShowPage(false)}><span>Close</span></span>
+                    <h2 className={sass.h2__page_title}>{props.title}</h2>
                     {props.children}
                 </div>
             </div>
