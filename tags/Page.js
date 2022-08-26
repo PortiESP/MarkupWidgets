@@ -11,13 +11,15 @@ export default function PageTransitionEvent(props){
     return (
         <>
         <div className={[sass.div__pagelabel_wrap, props.small && sass.small].join(" ")} onClick={ ()=> setShowPage(true)} id={props.id} style={props.style}>
-            <div className={sass.div__pagelabel_icon}>
-                <Image src={docsIcon} alt="Docs icon" objectFit="contain"/>
-            </div>
-            <div className={sass.div__pagelabel_data}>
-                <h3>{props.title}</h3>
-                <hr/>
-                { props.description && <p>{props.description}</p> }
+            <div className={sass.div__pagelabel_info}>
+                <div className={sass.div__pagelabel_icon}>
+                    <Image src={docsIcon} alt="Docs icon" layout="fill" objectFit="contain"/>
+                </div>
+                <div className={sass.div__pagelabel_data}>
+                    <h3>{props.title}</h3>
+                    <hr/>
+                    { props.description && <p>{props.description}</p> }
+                </div>
             </div>
             {
                 !props.small &&

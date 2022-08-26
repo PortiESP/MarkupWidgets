@@ -17,62 +17,42 @@
     border: 1px solid #555;
 
     &:hover{
-        background: #444;
-        
+        background: #383838;
+        & .div__pagelabel_preview{
+            background: #333;
+        }
         & .div__pagelabel_preview::-webkit-scrollbar-track{
-            background: #444;
+            background: #333;
         }
         & .div__pagelabel_preview::-webkit-scrollbar-thumb{
-            border-color: #444;
+            border-color: #333;
         }
 
     }
-    &.small{
-        font-size: .8rem;
-        padding: 12px;
-        height: 60px;
-        justify-content: flex-start;
+    
+    & .div__pagelabel_info{
+        display: flex;
         align-items: center;
-
-        & .div__pagelabel_icon{
-            width: 40px;
-            height: 40px;
-            margin: 0px;
-
-        }
-
-        & .div__pagelabel_data{
-            display: flex;
-            align-items: center;
-            gap:10px;
-            height: 100%;
-            white-space: nowrap;
-            width: 90%;
-
-            & h3{
-                padding:0 20px;
-                margin:0 10px;
-                border-right: 2px solid #aaa2;
-                border-left: 2px solid #aaa2;
-            }
-            & p{
-                overflow: hidden;
-                width: 100%;
-            }
-            
-        }
+        width: 100%;
     }
 
     & .div__pagelabel_icon{
+        position: relative;
         background-color: #333;
         padding: 8px;
-        margin: 0 20px;
+        margin: 20px;
         border-radius: 10px;
         width: 70px;
+        height: 70px;
+
+        & *{
+            transform: scale(80%);
+        }
+
     }
     
     & .div__pagelabel_data{
-        width: 50%;
+        width: 70%;
         height: 100%;
         margin-right: 20px;
         font-size: .8rem;
@@ -99,11 +79,16 @@
     }
 
     & .div__pagelabel_preview{
+
+        --color: #282828;
+
         position: relative;
         max-width: 30%;
         max-height: 100%;
-        // transform: scale(50%);
+        background: var(--color);
+        padding-left: 10px;
         font-size: .5rem;
+        border-radius: 10px;
 
         overflow-y:scroll;
         overflow-x: hidden;
@@ -111,13 +96,13 @@
             width: 20px;
         }
         &::-webkit-scrollbar-track{
-            background: #222;
+            background: var(--color);
             border-radius: 20px;
         }
         &::-webkit-scrollbar-thumb{
             background: #aaa4;
             border-radius: 10px;
-            border: 6px solid #222;
+            border: 6px solid var(--color);
         }
     }
     
@@ -208,13 +193,76 @@
 }
 
 
+.div__pagelabel_wrap.small{
+
+    font-size: .8rem;
+    padding: 12px;
+    height: 60px;
+    justify-content: flex-start;
+    align-items: center;
+
+    & .div__pagelabel_icon{
+        width: 40px;
+        height: 40px;
+        margin: 0px;
+
+    }
+
+    & .div__pagelabel_data{
+        display: flex;
+        align-items: center;
+        gap:10px;
+        height: 100%;
+        white-space: nowrap;
+        width: 90%;
+
+        & h3{
+            padding:0 20px;
+            margin:0 10px;
+            border-left: 2px solid #aaa2;
+            border-right: 2px solid #aaa2;
+        }
+        & p{
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+}
+
+
 @media (max-width: 1100px){
 
     .div__pagelabel_wrap{
-        flex-direction: column;
+        // flex-direction: column;
+        & .div__pagelabel_icon{
+            
+            // width: 70px;
+            // height: 70px;
+            // margin: 0 15px 0 10px;
+
+        }
+
+        & .div__pagelabel_data{
+            width: 80%;
+            font-size: .65rem;
+
+        }
 
         & .div__pagelabel_preview{
+            display: none;
             max-width: 100%;
+        }
+
+        &.small{
+            & .div__pagelabel_data {
+                & p{
+                    display: none;
+                }
+                & h3{
+                    padding: 0 10px;
+                    border-right: none;
+                }
+            }
         }
     }
 }
