@@ -187,10 +187,12 @@
 
 @media (max-width:600px){
     .code{
+
+        padding: 10px 20px;
         
-        & pre{
-            padding: 25px 20px;
-            font-size: .9rem;
+        & .pre__code{
+            padding: 25px 0;
+            font-size: .95em;
         }
         
         & .codeBtns{
@@ -203,6 +205,9 @@
         }
         & .codeCopy{
             opacity: .5;
+            --size: 25px;
+            border-radius: 5px;
+            background-size: calc( var(--size) - 8px);
         }
     }
 }
