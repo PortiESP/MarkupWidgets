@@ -53,9 +53,15 @@
             width: 35px;
             height: 35px;
 
+            transition: all .3 ease;
+
             & img{
                 filter: invert(.4);
                 transform: scale(60%);
+            }
+
+            &:active{
+                transform: scale(110%);
             }
         }
     }
@@ -65,9 +71,10 @@
     }
     & .div__data_src{
         position: absolute;
-        bottom: 10px;
+        bottom: 6px;
         font-size: .8em;
         font-style: italic;
+        font-weight: 400;
         color: #888;
     }
 }
@@ -80,11 +87,9 @@
     // background: #00a8;
 
     & > span:nth-child(1){
-        filter: blur(10px);
+        filter: blur(5px);
     }
-    & > span:nth-child(2){
-        transform: scale(90%);
-    }
+    
 }
 
 
@@ -122,3 +127,4 @@
         display: none;
     }
 }
+
