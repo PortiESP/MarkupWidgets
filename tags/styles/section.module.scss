@@ -1,0 +1,37 @@
+@import "./global";
+
+
+.section{
+    background: $darkGray;
+    margin: 20px 0;
+    
+    border-radius: 4px;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+
+    font-size: 1rem;
+}
+
+.div__headers{
+
+    
+    & .title{
+        padding: 20px;
+        color: #eee;
+        background-color: #444;
+        font-size: 3em;
+    }
+}
+
+.div__content{
+    padding: 20px;
+}
+
+
+@media (max-width:1100px){
+    .div__headers{
+        & .title{
+            padding: 10px;
+        }
+    }
+}

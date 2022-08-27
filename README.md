@@ -184,6 +184,7 @@ const myArray = {
   - [`Block`](#block)
   - [`Url`](#url)
   - [`Page`](#page)
+  - [`Section`](#section)
 
 
 ## Title
@@ -699,8 +700,6 @@ This widget takes and url and a few information to create a card to make the URL
 
 This widget can hold content and display it as a popup on click event
 
-// --------------- Docs, disable preview
-
 > ### **Props**
 > - `title` - Title for the page card
 > - `description` - Description of the page content
@@ -721,3 +720,26 @@ This widget can hold content and display it as a popup on click event
 ![Page small screenshoot](https://i.gyazo.com/9212fe8ebfd4f244118a08575253df2d.png "Page small screenshoot")
 ![Page opened](https://i.gyazo.com/319dd02ad8d4f629cd597222b9c9b0c2.png "Page opened screenshoot")
 
+[*Go to widgets*](#widgets-list)
+
+## Section
+
+This widget is just a section with styles and a preformated title
+
+> ### **Props**
+> - `title` - Add an h2 at the beggining of the section
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+
+
+```js
+<Tags.Section id="secction--example">
+                <h1>gg</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+</Tags.Section>
+```
+
+![Section screenshoot](https://i.gyazo.com/12a30eaa510448d584bc725e6962665b.png "Section screenshoot")
+
+[*Go to widgets*](#widgets-list)
