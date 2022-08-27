@@ -682,6 +682,7 @@ This widget takes and url and a few information to create a card to make the URL
 
 > ### **Props**
 > - `src` - URL we want to embed
+> - `img` - Image we want to show
 > - `title` - Title for the URL card
 > - `description` - Description of the URL content
 > - `style` - Styles object
