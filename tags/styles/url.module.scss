@@ -60,6 +60,10 @@
                 transform: scale(60%);
             }
 
+            &:hover{
+                background: #aaa6;
+            }
+
             &:active{
                 transform: scale(110%);
             }
@@ -80,6 +84,7 @@
 
         width: 92%;
         overflow: hidden;
+
     }
 }
 
