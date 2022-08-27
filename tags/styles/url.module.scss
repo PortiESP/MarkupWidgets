@@ -8,6 +8,21 @@
     border-radius: 10px;
     border: 1px solid rgb(71, 71, 71);
     overflow: hidden;
+
+    &:hover{
+        & .div__url_data{
+            background: #333;
+            & .div__title_img{
+                background: #555;
+                & img {
+                    filter: invert(.9);
+                }
+            }
+            & .div__data_src{
+                color: #eee;
+            }    
+        } 
+    }
 }
 
 
@@ -20,11 +35,29 @@
     font-size: 1rem;
 
     & .div__data_title{
+        position: relative;
         font-size: 1.6em;
         padding-bottom: 6px;
         border-bottom: 1px solid #eee1;
         margin-bottom: 10px;
         font-weight: 700;
+
+        & .div__title_img{
+            position: absolute;
+            top: 0px;
+            right: 20px;
+            background: #aaa4;
+            border-radius: 10px;
+            padding: 5px;
+
+            width: 35px;
+            height: 35px;
+
+            & img{
+                filter: invert(.4);
+                transform: scale(60%);
+            }
+        }
     }
     & .div__data_description{
         color: #bbb;
@@ -56,11 +89,35 @@
 
 @media (max-width: 1100px){
     .div__url_data{
+        width: 100%;
+        padding: 10px;
         & .div__data_title{
             font-size: 1.4em;
+            margin-bottom: 4px;
+
+            & .div__title_img{
+                width: 30px;
+                height: 30px;
+                // top: -4px;
+                right: 0px;
+
+                & img{
+                    filter: invert(.8);
+                }
+            }
         }
         & .div__data_description{
             font-size: .8em;
+            padding: 4px 0;
         }
+
+        & .div__data_src{
+            font-size: .6em;
+            bottom: 4px;
+        }
+    }
+
+    .div__url_embed{
+        display: none;
     }
 }
