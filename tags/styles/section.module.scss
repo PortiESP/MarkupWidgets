@@ -2,25 +2,39 @@
 
 
 .section{
+    position: relative;
     background: $darkGray;
     margin: 20px 0;
     
     border-radius: 4px;
     box-shadow: 0 0 10px black;
-    overflow: hidden;
-
+    // overflow: hidden;
+    
     font-size: 1rem;
 }
 
 .div__headers{
+    
+    border-radius: 4px 4px 0 0 ;
+    top: 0px;
+    padding-bottom: 10px;
+    overflow: hidden;
 
+    &.sticky{
+        position: sticky;
+    }
+
+    z-index: 5;
     
     & .title{
         padding: 20px;
         color: #eee;
         background-color: #444;
         font-size: 3em;
+        box-shadow: 0 0 10px black;
     }
+
+
 }
 
 .div__content{

@@ -728,6 +728,7 @@ This widget is just a section with styles and a preformated title
 
 > ### **Props**
 > - `title` - Add an h2 at the beggining of the section
+> - `sticky` - Make titles stick to the top of the viewport
 > - `style` - Styles object
 > - `id` - Add an ID attribute
 

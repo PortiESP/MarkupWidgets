@@ -6,7 +6,7 @@ export default function Section(props){
 
     return (
         <section className={sass.section} id={props.id} style={props.style}>
-            <div className={sass.div__headers}>
+            <div className={[sass.div__headers, props.sticky && sass.sticky].join(" ")}>
                 {props.title && <h2 className={sass.title}>{props.title}</h2>}
             </div>
             <div className={sass.div__content}>
