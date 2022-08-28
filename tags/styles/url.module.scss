@@ -1,6 +1,10 @@
 @import "./global";
 
 
+.a__wrap{
+    text-decoration: none;
+    color: inherit;
+}
 
 .div__url_wrap{
     display: flex;
@@ -8,6 +12,7 @@
     border-radius: 10px;
     border: 1px solid rgb(71, 71, 71);
     overflow: hidden;
+
 
     &:hover{
         & .div__url_data{
