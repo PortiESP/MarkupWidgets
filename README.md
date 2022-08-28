@@ -253,6 +253,7 @@ The link widget is the same as the `<a>` tag but with its own styles
 > ### **Props**
 > - `href` - Target location of the link
 > - `title` - Add a *title* attribute to the tag
+> - `target` - Add *target* attribute to the tag
 > - `text` - Text content
 > - `style` - Styles object
 > - `id` - Add an ID attribute
