@@ -254,6 +254,7 @@ The link widget is the same as the `<a>` tag but with its own styles
 > - `href` - Target location of the link
 > - `title` - Add a *title* attribute to the tag
 > - `target` - Add *target* attribute to the tag
+> - `dynamic` - Flag for dynamic URLs on the same host
 > - `text` - Text content
 > - `style` - Styles object
 > - `id` - Add an ID attribute
@@ -686,6 +687,7 @@ This widget takes and url and a few information to create a card to make the URL
 > - `img` - Image we want to show
 > - `title` - Title for the URL card
 > - `description` - Description of the URL content
+> - `dynamic` - Flag for dynamic URLs on the same host
 > - `style` - Styles object
 > - `id` - Add an ID attribute
 

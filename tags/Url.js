@@ -6,8 +6,8 @@ import Link from "next/link"
 export default function Url(props){
 
     return (
-        <Link href={props.src} target="_blank">
-            <a className={sass.a__wrap}>
+        <Link href={props.src} target="_blank" >
+            <a className={sass.a__wrap} onClick={ props.dynamic ? ()=> window.location.href = props.src : undefined }>
                 <div className={sass.div__url_wrap} style={props.style} id={props.id}>
                     <div className={sass.div__url_data}>
                         <div className={sass.div__data_title}>
