@@ -687,7 +687,6 @@ This widget takes and url and a few information to create a card to make the URL
 > - `img` - Image we want to show
 > - `title` - Title for the URL card
 > - `description` - Description of the URL content
-> - `dynamic` - Flag for dynamic URLs on the same host
 > - `style` - Styles object
 > - `id` - Add an ID attribute
 
