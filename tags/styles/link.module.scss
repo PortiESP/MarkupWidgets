@@ -1,18 +1,11 @@
 @import "./global";
 
-.link{
+.a__wrap{
     background-color: $gray;
-    color: $white;
-    font-size: 1em;
+    color: $link;
     text-decoration: underline;
-    
+
     &:hover{
         color: $linkHover;
-    }
-}
-
-@media (max-width:600px){
-    .link{
-        font-size: 1rem;
     }
 }
