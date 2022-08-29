@@ -1,0 +1,22 @@
+{
+  "name": "markup-widgets",
+  "version": "1.0.0",
+  "description": "This is a library of React components (widgets) to build your site",
+  "main": "Tags.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PortiESP/MarkupWidgets.git"
+  },
+  "keywords": [
+    "Widgets"
+  ],
+  "author": "Porti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PortiESP/MarkupWidgets/issues"
+  },
+  "homepage": "https://github.com/PortiESP/MarkupWidgets#readme"
+}
