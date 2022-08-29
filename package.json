@@ -1,6 +1,6 @@
 {
   "name": "@porti_esp/markup-widgets",
-  "version": "1.2.0",
+  "version": "1.2.5",
   "description": "This is a library of React components (widgets) to build your site",
   "main": "Tags.js",
   "scripts": {
@@ -20,10 +20,12 @@
   },
   "homepage": "https://github.com/PortiESP/MarkupWidgets#readme",
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.5",
+    "next": "^12.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.54.5",
-    "url-loader": "^4.1.1"
+    "sass": "^1.54.5"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
