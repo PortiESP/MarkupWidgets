@@ -1,6 +1,6 @@
 {
   "name": "@porti_esp/markup-widgets",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "This is a library of React components (widgets) to build your site",
   "main": "Tags.js",
   "scripts": {
