@@ -418,12 +418,13 @@ This widget can take 3 styles:
 > - `title` Add a *title* attribute
 > - `text` - Text content
 > - `style` - Styles object
+> - `color` - Theme color of the box
 > - `id` - Add an ID attribute
 
 Quote block, colors can be personalized with the `style` props
 
 ```html
-<Tags.Quote title="Quote title">
+<Tags.Quote title="Quote title" color="#f5a206">
     This is a template text for a quote element as a text prop
 </Tags.Qoute>
 

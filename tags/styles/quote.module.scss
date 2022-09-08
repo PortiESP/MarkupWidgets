@@ -1,14 +1,25 @@
 @import "./global";
 
 .quote{
+
+    --color:#333;
+    position: relative;
     margin: 20px 0;
     padding: 30px;
-    background-color: $gray;
+    background-color: var(--color);
     color: $white;
     font-size: 1.1rem;
     font-weight: 300;
-    border-left: 8px solid $lightGray;
     word-wrap: break-word;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;left: 0;
+        height: 100%;
+        border-left: 8px solid var(--color);
+        filter: brightness(200%);
+    }
 
     & h4{
         display: block;
