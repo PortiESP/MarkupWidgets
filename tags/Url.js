@@ -10,7 +10,7 @@ export default function Url(props){
             <div className={sass.div__url_wrap} style={props.style} id={props.id}>
                 <div className={sass.div__url_data}>
                     <div className={sass.div__data_title}>
-                        <span>{props.title}</span>
+                        <span>🌐 {props.title}</span>
                         <div className={sass.div__title_img} onClick={ e => {
                             e.preventDefault()
                             navigator.clipboard.writeText(props.src)
