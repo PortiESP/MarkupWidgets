@@ -36,20 +36,23 @@ export default function Button(props){
 
             `}</style>
             <div className={`${className} ${props.mini && sass.mini}`} style={props.style} id={props.id} onClick={props.callback || props.href && gotoHref}>
-                
-                <div className={sass.button} style={props.styleButton}>
-                    { props.icon && 
-                    <div className={sass.div__image} style={props.styleIcon}>
-                        <Image src={props.icon} alt="Button icon" layout="fill" objectFit="contain"/>
-                    </div>
-                    }
-                    {
-                        props.mini && props.icon ? "": 
-                        <div className={sass.div__text} style={props.styleText}>
-                            <span>{props.children || props.text}</span>
+                <a href={props.href} rel="noreferrer" target="_blank">
+
+                    <div className={sass.button} style={props.styleButton}>
+                        { props.icon && 
+                        <div className={sass.div__image} style={props.styleIcon}>
+                            <Image src={props.icon} alt="Button icon" layout="fill" objectFit="contain"/>
                         </div>
-                    }
-                </div>
+                        }
+                        {
+                            props.mini && props.icon ? "": 
+                            <div className={sass.div__text} style={props.styleText}>
+                                <span>{props.children || props.text}</span>
+                            </div>
+                        }
+                    </div>
+
+                </a>
             </div>
         </>
     )
