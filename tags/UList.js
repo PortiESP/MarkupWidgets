@@ -1,3 +1,5 @@
+'use client'
+
 import {ulist as className} from "./styles/ul.module.scss"
 
 export default function UList(props){

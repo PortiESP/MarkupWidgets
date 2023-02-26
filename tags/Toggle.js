@@ -1,3 +1,5 @@
+'use client'
+
 import sass, {toggle as className} from "./styles/toggle.module.scss"
 import { useState } from "react"
 export default function Toggle(props){

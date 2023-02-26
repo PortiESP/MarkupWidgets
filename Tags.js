@@ -9,15 +9,14 @@ import Link from "./tags/Link"
 import Hr from "./tags/Hr"
 import Button from "./tags/Button"
 import Toggle from "./tags/Toggle"
-import Carousel from "./tags/Carousel"
 import Block from "./tags/Block"
 import Color from "./tags/Colors"
 import Url from "./tags/Url"
-import Page from "./tags/Page"
+import Page from "./tags/SubPage"
 import Section from "./tags/Section"
 
-const tags = { Title, Title2, Title3, Title4, Paragraph, Code, Color, Img, UList, Callout, Quote, Link, Hr, Button, Toggle, Carousel, Block, Url, Page, Section }
+const tags = { Title, Title2, Title3, Title4, Paragraph, Code, Color, Img, UList, Callout, Quote, Link, Hr, Button, Toggle, Block, Url, Page, Section }
 
 // Exports
 export default tags; // Export all
-export { Title, Title2, Title3, Title4, Paragraph, Code, Color, Img, UList, Callout, Quote, Link, Hr, Button, Toggle, Carousel, Block, Url, Page, Section }; // Export individual
+export { Title, Title2, Title3, Title4, Paragraph, Code, Color, Img, UList, Callout, Quote, Link, Hr, Button, Toggle, Block, Url, Page, Section }; // Export individual

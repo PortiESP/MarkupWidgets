@@ -1,3 +1,5 @@
+'use client'
+
 import {title, title2, title3, title4} from "./styles/title.module.scss"
 
 

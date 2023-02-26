@@ -1,3 +1,5 @@
+'use client'
+
 import {callout as className} from "./styles/callout.module.scss"
 
 // labelData={{text: "Secret", color: "#25AA88", style: ["font-weight: 500;", "filter: brightness(130%);"]}}

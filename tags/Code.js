@@ -1,3 +1,5 @@
+'use client'
+
 import sass, {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation, inlineCode, caption} from "./styles/code.module.scss"
 import {useRef, useState} from "react"
 

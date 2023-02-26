@@ -1,10 +1,9 @@
+'use client'
+
 import sass, {button_wrap as className} from "./styles/button.module.scss"
 import Image from "next/image"
-import Link from "next/link"
-import { Router, useRouter } from "next/router"
 
 export default function Button(props){
-     const router = useRouter()
 
 
     function gotoHref(){

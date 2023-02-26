@@ -180,7 +180,6 @@ const myArray = {
   - [`italic`/`bold`](#italic--bold-styles)
   - [`Button`](#button)
   - [`Toggle`](#toggle)
-  - [`Carousel`](#carousel)
   - [`Block`](#block)
   - [`Url`](#url)
   - [`Page`](#page)
@@ -624,39 +623,7 @@ This widget can expand to show more content
 
 [*Go to widgets*](#widgets-list)
 
-## Carousel
 
-The content carousel will display an infinite number of contents as cards, 3 cards are displayed at the same time while the rest is hided, the content can rotate in any direction infinitely, to navigate through the rest of the content cards you can use the arrows, the bubbles or clicking on the side cards
-
-> ### **Props**
-> - `cards` - Array where each index holds the content of one card
-> - `callback` - This function will be called when the usesr clicks the central card
-> - `default` - Index of the card that will be show in the center
-> - `spacing` - This value detemine the distance between the side cards and the center (*use units*)
-> - `duration` - Duration of the spinning animation
-> - `style` - Styles object
-> - `id` - Add an ID attribute
-
-
-```js
-<Tags.Carousel 
-    callback={ i => console.log(i)}
-    spacing="80%"
-    cards={[
-        <Tags.Title key="" text="Title 1"/>, 
-        <Tags.Title key="" text="Title 2"/>, 
-        <Tags.Title key="" text="Title 3"/>, 
-        <Tags.Title key="" text="Title 4"/>, 
-        <Tags.Title key="" text="Title 5"/>, 
-        <Tags.Title key="" text="Title 6"/>, 
-        <Tags.Title key="" text="Title 7"/>
-    ]}
-/>
-```
-
-![Carousel screenshoot](https://i.gyazo.com/eea44e2fba65056d98d872de379585dd.png "Carousel screenshoot")
-
-[*Go to widgets*](#widgets-list)
 
 ## Block
 

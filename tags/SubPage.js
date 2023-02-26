@@ -1,6 +1,8 @@
+'use client'
+
 import { useState } from "react"
 import Image from "next/image"
-import sass from "./styles/page.module.scss"
+import sass from "./styles/subpage.module.scss"
 import docsIcon from "../assets/icons/docs.png"
 
 // props: title, description, style, id, small, disable
