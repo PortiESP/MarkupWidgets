@@ -46,7 +46,8 @@
         height: 70px;
 
         & *{
-            transform: scale(80%);
+            object-fit: contain;
+            transform: scale(70%);
         }
 
     }

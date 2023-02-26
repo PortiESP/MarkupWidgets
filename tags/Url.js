@@ -17,7 +17,7 @@ export default function Url(props){
                             e.preventDefault()
                             navigator.clipboard.writeText(props.src)
                         }}>
-                            <Image src={icon} alt="link icon" layout="fill" objectFit="contain" title="Copy url" />
+                            <Image src={icon} alt="link icon" fill title="Copy url" />
                         </div>
                     </div>
                     <div className={sass.div__data_description}>{props.description}</div>
@@ -26,8 +26,8 @@ export default function Url(props){
                 {
                     props.img &&
                     <div className={sass.div__url_img}>
-                        <Image src={props.img} alt="Favicon" layout="fill" objectFit="cover"/>
-                        <Image src={props.img} alt="Favicon" layout="fill" objectFit="contain"/>
+                        <Image src={props.img} alt="Favicon" fill/>
+                        <Image src={props.img} alt="Favicon" fill/>
                     </div>
                 }
             </div>

@@ -15,7 +15,7 @@ export default function PageTransitionEvent(props){
         <div className={[sass.div__pagelabel_wrap, props.small && sass.small].join(" ")} onClick={ ()=> setShowPage(true)} id={props.id} style={props.style}>
             <div className={sass.div__pagelabel_info}>
                 <div className={sass.div__pagelabel_icon}>
-                    <Image src={docsIcon} alt="Docs icon" layout="fill" objectFit="contain"/>
+                    <Image src={docsIcon} alt="Docs icon" fill />
                 </div>
                 <div className={sass.div__pagelabel_data}>
                     <h3>{props.title}</h3>

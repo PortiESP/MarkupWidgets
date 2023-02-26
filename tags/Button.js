@@ -41,7 +41,7 @@ export default function Button(props){
                     <div className={sass.button} style={props.styleButton}>
                         { props.icon && 
                         <div className={sass.div__image} style={props.styleIcon}>
-                            <Image src={props.icon} alt="Button icon" layout="fill" objectFit="contain"/>
+                            <Image src={props.icon} alt="Button icon" fill />
                         </div>
                         }
                         {
