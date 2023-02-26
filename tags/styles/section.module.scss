@@ -16,7 +16,7 @@
 .div__headers{
     
     border-radius: 4px 4px 0 0 ;
-    top: 0px;
+    top: 80px;
     padding-bottom: 10px;
     overflow: hidden;
 
@@ -24,7 +24,7 @@
         position: sticky;
     }
 
-    z-index: 5;
+    z-index: 2;
     
     & .title{
         padding: 20px;
