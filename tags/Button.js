@@ -2,6 +2,7 @@
 
 import sass, {button_wrap as className} from "./styles/button.module.scss"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Button(props){
 
@@ -35,7 +36,7 @@ export default function Button(props){
 
             `}</style>
             <div className={`${className} ${props.mini && sass.mini}`} style={props.style} id={props.id} onClick={props.callback || props.href && gotoHref}>
-                <a href={props.href} rel="noreferrer" target="_blank">
+                <Link href={props.href} rel="noreferrer" target="_blank">
 
                     <div className={sass.button} style={props.styleButton}>
                         { props.icon && 
@@ -51,7 +52,7 @@ export default function Button(props){
                         }
                     </div>
 
-                </a>
+                </Link>
             </div>
         </>
     )
