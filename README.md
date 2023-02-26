@@ -1,7 +1,7 @@
 
 # MarkupWidgets docs 📖
 
-The MarkupWidgets module is a packet of React components (widgets) that provides more tags for building web pages that the programmer can use as default but also customize the base component.
+The MarkupWidgets module is a packet of React components (widgets) that provides more tags for building web SubPages that the programmer can use as default but also customize the base component.
 
 [*Go to widgets*](#widgets-list)
 
@@ -13,14 +13,14 @@ The MarkupWidgets module is a packet of React components (widgets) that provides
 - 😍 Nice designs 
 - 🏷️ Styles, IDs, etc...
 
-### *Example page:*
+### *Example SubPage:*
 
 <details>
   <summary>Example screenshoots 🖼️</summary> 
 
-![Screenshoot page 1](https://i.gyazo.com/d6d15a8a876deedf5358e82d18a3b094.jpg)
-![Screenshoot page 2](https://i.gyazo.com/a9e96bbb6ab3c3af088d3583531b0d9b.jpg)
-![Screenshoot page 3](https://i.gyazo.com/edc26983da335f72ac784db9fc531808.png)
+![Screenshoot SubPage 1](https://i.gyazo.com/d6d15a8a876deedf5358e82d18a3b094.jpg)
+![Screenshoot SubPage 2](https://i.gyazo.com/a9e96bbb6ab3c3af088d3583531b0d9b.jpg)
+![Screenshoot SubPage 3](https://i.gyazo.com/edc26983da335f72ac784db9fc531808.png)
   
  </details>
 
@@ -35,7 +35,7 @@ The MarkupWidgets module is a packet of React components (widgets) that provides
         Title
     </Tags.Title>
     <Tags.Paragraph>
-        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas Letraset, las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas Letraset, las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus SubPageMaker, el cual incluye versiones de Lorem Ipsum.
     </Tags.Paragraph>
     <Tags.Title2>
         Subtitle
@@ -182,7 +182,7 @@ const myArray = {
   - [`Toggle`](#toggle)
   - [`Block`](#block)
   - [`Url`](#url)
-  - [`Page`](#page)
+  - [`SubPage`](#SubPage)
   - [`Section`](#section)
 
 
@@ -667,29 +667,29 @@ This widget takes and url and a few information to create a card to make the URL
 
 [*Go to widgets*](#widgets-list)
 
-## Page
+## SubPage
 
 This widget can hold content and display it as a popup on click event
 
 > ### **Props**
-> - `title` - Title for the page card
-> - `description` - Description of the page content
+> - `title` - Title for the SubPage card
+> - `description` - Description of the SubPage content
 > - `style` - Styles object
 > - `id` - Add an ID attribute
 > - `small` - Smmaller version of the widget without preview
 
 
 ```js
-<Tags.Page title="Test page" description="Template description" small>
+<Tags.SubPage title="Test SubPage" description="Template description" small>
                 <h1>gg</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-</Tags.Page>
+</Tags.SubPage>
 ```
 
-![Page screenshoot](https://i.gyazo.com/244073869b78ed34d398c7fda30b71e2.png "Page screenshoot")
-![Page small screenshoot](https://i.gyazo.com/9212fe8ebfd4f244118a08575253df2d.png "Page small screenshoot")
-![Page opened](https://i.gyazo.com/319dd02ad8d4f629cd597222b9c9b0c2.png "Page opened screenshoot")
+![SubPage screenshoot](https://i.gyazo.com/244073869b78ed34d398c7fda30b71e2.png "SubPage screenshoot")
+![SubPage small screenshoot](https://i.gyazo.com/9212fe8ebfd4f244118a08575253df2d.png "SubPage small screenshoot")
+![SubPage opened](https://i.gyazo.com/319dd02ad8d4f629cd597222b9c9b0c2.png "SubPage opened screenshoot")
 
 [*Go to widgets*](#widgets-list)
 
