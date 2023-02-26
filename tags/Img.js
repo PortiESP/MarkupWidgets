@@ -13,15 +13,19 @@ export default function Img(props){
                     src={props.img} 
                     alt={props.alt || props.title}
                     title={props.title}
-                    height={props.height} 
-                    width={props.width} 
-                    layout="fill" 
-                    objectFit="contain"
+                    fill
+                    
                 />
+
+    const imgStyle = { 
+        aspectRatio: props.ratio, 
+        height: props.height,
+        ...props.style
+    }
 
     return (
         <>
-            <div className={sass.div__image} style={{ aspectRatio: props.ratio, ...props.style}} id={props.id} title={props.title} onClick={()=>setZoom(true)}>
+            <div className={sass.div__image} style={imgStyle} id={props.id} title={props.title} onClick={()=>setZoom(true)}>
                 {img}
                 { !props.hideCaption && <span className={sass.span__caption}>{props.title}</span> }
             </div>

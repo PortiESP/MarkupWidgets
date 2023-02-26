@@ -1,3 +1,5 @@
+'use client'
+
 import sass from "./styles/url.module.scss"
 import icon from "../assets/icons/enlace.png"
 import Image from "next/image"

@@ -14,8 +14,8 @@ export default function Link(props){
                 title={props.title} 
                 style={props.style}
                 >
-                    <a className={sass.a__wrap} onClick={ ()=> props.dynamic ? window.location.href = props.href : undefined }>
-                        {props.children || props.text}
-                    </a>
+                    
+                    {props.children || props.text}
+                    
             </NextLink>
 }

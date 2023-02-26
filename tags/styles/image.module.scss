@@ -9,6 +9,10 @@
 
     aspect-ratio: 16/9;
 
+    & img{
+        object-fit: contain;
+    }
+
     &:hover{
         & .span__caption{
             opacity: 1;
@@ -54,6 +58,10 @@
         width: 90%;
         max-height: 90vh;
         aspect-ratio: 16/9;
+
+        & img{
+            object-fit: contain;
+        }
 
         & .span__caption{
             white-space: nowrap;
