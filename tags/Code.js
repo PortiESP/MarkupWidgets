@@ -2,6 +2,9 @@
 
 import sass, {code as className, codeBtns, codeCopy, codeCopied, codeCopiedAnimation, inlineCode, caption} from "./styles/code.module.scss"
 import {useRef, useState} from "react"
+import Image from "next/image"
+
+import copyIcon from "../assets/icons/copy.png"
 
 
 
@@ -41,7 +44,7 @@ export default function Code(props){
                 <div className={sass.btnOrange} />
                 <div className={sass.btnGreen} />
             </div>
-            <div className={sass.codeCopy} onClick={copy}/>
+            <div className={sass.codeCopy} onClick={copy}><Image alt="Copy Icon" src={copyIcon} fill></Image></div>
             <span className={[sass.codeCopied, showCopied ? sass.codeCopiedAnimation : ""].join(" ")}>Copied to clipboard...</span>
             { 
                     props.caption ?

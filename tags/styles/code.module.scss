@@ -126,20 +126,23 @@
     }
     
     & .codeCopy{
-        --size: 35px;
         position: absolute;
         bottom: 10px;
         right: 10px;
-        border-radius: 10px;
+        
+        width: 32px;
+        height: 32px;
+
+        border-radius: 8px;
         opacity: 0;
-        width: var(--size);
-        height: var(--size);
-        filter: invert(90);
-        background-image: url("../../assets/icons/copy.png");
-        background-size: calc( var(--size) - 13px);
-        background-position: center;
-        background-repeat: no-repeat;
         background-color: rgba(117, 117, 117, 0.192);
+
+        & img{
+            object-fit: contain;
+            transform: scale(80%);
+            opacity: .5;
+            filter: invert(90%);
+        }
         
     }
 
@@ -147,8 +150,8 @@
         & .codeCopy{
            opacity: .5;
 
-           &:hover{
-               filter: invert(90) brightness(180%);
+            &:hover{
+                background: #8888;
             }    
         }
 
