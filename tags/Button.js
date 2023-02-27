@@ -6,11 +6,6 @@ import Link from "next/link"
 
 export default function Button(props){
 
-
-    function gotoHref(){
-        router.push(props.href)
-    }
-
     return (
         <>
             <style jsx="true">{`
@@ -35,7 +30,7 @@ export default function Button(props){
                 }
 
             `}</style>
-            <div className={`${className} ${props.mini && sass.mini}`} style={props.style} id={props.id} onClick={props.callback || props.href && gotoHref}>
+            <div className={`${className} ${props.mini && sass.mini}`} style={props.style} id={props.id} onClick={props.callback}>
                 <Link href={props.href} rel="noreferrer" target="_blank">
 
                     <div className={sass.button} style={props.styleButton}>
