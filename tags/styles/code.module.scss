@@ -130,14 +130,17 @@
         bottom: 10px;
         right: 10px;
         
-        width: 32px;
-        height: 32px;
-
+        $iconSize: 30px;
+        width: $iconSize;
+        height: $iconSize;
+        
         border-radius: 8px;
         opacity: 0;
         background-color: rgba(117, 117, 117, 0.192);
-
+        
         & img{
+            width: $iconSize;
+            height: $iconSize;
             object-fit: contain;
             transform: scale(80%);
             opacity: .5;
