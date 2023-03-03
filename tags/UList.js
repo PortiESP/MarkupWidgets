@@ -7,7 +7,7 @@ export default function UList(props){
         <>
             <style jsx="true">{`
                 .${className}{
-                    ${props.bulletColor && `--bulletColor:${props.bulletColor};`}
+                    ${props.bulletColor && `$bulletColor:${props.bulletColor};`}
                 }
             `}</style>
             <ul className={className} style={props.style} id={props.id}>

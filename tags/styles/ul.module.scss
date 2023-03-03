@@ -1,17 +1,17 @@
 @import "./global";
 
 .ulist{
-    color: $white;
-    font-size: 1em;
-    font-weight: 300;
+    color: #dedede;
+    font-size: 1.1em;
     padding: 20px 40px;
-    padding-left: 40px;
     list-style:none;
 
     --bulletColor:gray;
 
     & li{
         position: relative;
+        margin: 10px auto;
+        line-height: 140%;
     }
 
     & li::before{
