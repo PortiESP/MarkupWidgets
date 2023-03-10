@@ -6,7 +6,7 @@
 
 The widget file must export a React component as the default export
 
-> When creating a new component dont forget to add 'id' and 'style' props to allow it to be personalizable bu the user
+> When creating a new component dont forget to add 'id' and 'style' props to allow it to be personalizable by the user
 
 ```js
 // Example from 'Paragraph' widget

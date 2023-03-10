@@ -1,0 +1,36 @@
+
+.span__wrap{
+    display: inline-block;
+    height: 60px;
+}
+
+.span__key{
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    margin: 0 10px;
+    min-width: 43px;
+    
+    background: #333;
+    box-shadow: 0 10px 0 #111, 0 10px 0 2px #444;
+    border-radius: 10px;
+    font-family:monospace, sans-serif;
+    font-size: .9em;
+
+    transition:all .2s ease;
+    
+    &:hover{
+        filter: brightness(80%);
+        box-shadow:0 0px 0 #111, 0 0px 0 2px #444, 0 -2px 10px -2px #111 inset;
+        transform: translateY(10px);
+    }
+}
+
+
+.span__title{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    color: #eee;
+    text-align: center;
+}

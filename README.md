@@ -184,6 +184,7 @@ const myArray = {
   - [`Url`](#url)
   - [`SubPage`](#SubPage)
   - [`Section`](#section)
+  - [`KbdKey`](#kbdkey)
 
 
 ## Title
@@ -713,5 +714,27 @@ This widget is just a section with styles and a preformated title
 ```
 
 ![Section screenshoot](https://i.gyazo.com/12a30eaa510448d584bc725e6962665b.png "Section screenshoot")
+
+[*Go to widgets*](#widgets-list)
+
+
+
+## KbdKey
+
+This widget adds a styled keyboard key as an inline tag
+
+> ### **Props**
+> - `title` - The key value as a props
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+
+
+```js
+    <Tags.KbdKey>WIN</Tags.KbdKey>
+    <Tags.KbdKey title="WIN"/>
+```
+
+![Section screenshoot](https://i.gyazo.com/0e8fe0f1907185b0cbfad2da85b1eb03.png "KbdKey screenshoot")
+![Section screenshoot](https://i.gyazo.com/7597daf49bfe2f81a60ab44a7d8e7a65.png "KbdKey hover screenshoot")
 
 [*Go to widgets*](#widgets-list)
