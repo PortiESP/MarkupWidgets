@@ -22,7 +22,7 @@
         box-shadow: 0 0 10px 0 black;
     }
     
-    & p{
+    & > div{
         background-color: $gray;
         padding: 40px;
         border-radius: 8px;
@@ -42,7 +42,7 @@
 
         }
 
-        & p{
+        & > div{
             font-size: .9em;
             padding: 22px 14px 10px;
 

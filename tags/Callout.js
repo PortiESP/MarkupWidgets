@@ -58,7 +58,7 @@ export default function Callout(props){
 
             `}</style>
             <div className={[className, props.label].join(" ")} style={props.style} id={props.id}>
-                <p >{props.children || props.text}</p>
+                <div>{props.children || props.text}</div>
             </div>
         </>
     )
