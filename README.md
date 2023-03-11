@@ -290,16 +290,44 @@ import testImg from "./exampleImage.jpg"
 
 
 <Tags.Img src={testImg} alt="Alt text"/>
-<Tags.Img src="./images/image.jpg" alt="Alt text"/>
+<Tags.Img src="./images/image.jpg" alt="Alt text" ratio="1/2"/>
 <Tags.Img src="./images/image.jpg" width="100px" height="50px" alt="Alt text"/>
 
-<Tags.Img src={testImg} alt="Alt text" title="Title" caption="Caption"/>
-<Tags.Img src={testImg} alt="Alt text" onClick={myCallback}/>
+<Tags.Img src={testImg} alt="Alt text" title="Title"/>
+<Tags.Img src={testImg} alt="Alt text"/>
 ```
 
 ![Img example screenshoot](https://i.gyazo.com/a3ef41ebe0be29818230b3b2791d4381.png  "Img example screenshoot")
 
 [*Go to widgets*](#widgets-list)
+
+
+## ImgTextAside
+
+Display an image with an aside section for text or other tags
+
+> Use the `ratio` prop to adjust the image postion and size
+
+> ### **Props**
+> - `src` - Image object/path
+> - `title` - Add a the *alt* and *title* value
+> - `ratio` - Aspect ratio of the image (default 1/1)
+> - `imgProportion` - Porcetage of the block that will be reserved for the image
+> - `style` - Styles object
+> - `id` - Add an ID attribute
+
+```javascript
+import testImg from "./exampleImage.jpg"
+
+<Tags.ImgTextAside src={testImg} title="Alt text" ratio="1/2" imgProportion="30%"/>
+
+```
+
+![ImgTextAside example screenshoot](https://i.gyazo.com/e074246e485f572ad7ec58f6975b053e.png  "ImgTextAsido example screenshoot")
+
+[*Go to widgets*](#widgets-list)
+
+
 
 ## Code
 

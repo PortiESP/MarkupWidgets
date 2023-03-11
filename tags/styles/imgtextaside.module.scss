@@ -1,0 +1,39 @@
+@import "./global";
+
+
+
+.div__wrap{
+    width: 100%;
+    position: relative;
+    display: flex;
+    gap:10px;
+    min-height: 100px;
+    margin: 10px 0;
+
+    --imgProportion:30%;
+}
+
+
+.div__image_wrap{
+    position: relative;
+    width: var(--imgProportion);
+    height: 100%;
+    
+    & img{
+        object-fit:contain;
+    }
+}
+
+
+.div__text_wrap{
+    width: calc(100% - var(--imgProportion));
+    padding-left: 10px;
+
+    color: $white;
+    font-family: inherit;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 200%;
+    letter-spacing: 1px;
+    word-wrap:break-word;
+}
