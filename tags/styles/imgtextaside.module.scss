@@ -37,3 +37,37 @@
     letter-spacing: 1px;
     word-wrap:break-word;
 }
+
+@media (max-width:1100px){
+    .div__wrap{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .div__image_wrap{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+
+        & > div:nth-child(1) img{
+            position: relative;
+            object-fit: cover;
+            filter: brightness(40%);
+        }
+
+        & span{
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color:#ddd;
+            pointer-events: none;
+        }
+    }
+
+    .div__text_wrap{
+        width: 100%;
+    }
+}

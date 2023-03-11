@@ -13,7 +13,10 @@ export default function ImgTextAside(props){
             }
         `}</style>
         <div className={sass.div__wrap} id={props.id} style={props.style}>
-            <div className={sass.div__image_wrap}><Img title={props.title} src={props.src} style={{margin:"0"}} ratio={props.ratio || "1/1"} hideCaption/></div>
+            <div className={sass.div__image_wrap}>
+                <Img title={props.title} src={props.src} style={{margin:"0"}} ratio={props.ratio || "1/1"} hideCaption/>
+                <span className={sass.span__img_msg}><i>Tap here to view the image</i></span>
+            </div>
             <div className={sass.div__text_wrap}>{props.children}</div>
         </div>
     </>)
