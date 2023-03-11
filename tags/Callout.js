@@ -1,6 +1,6 @@
 'use client'
 
-import {callout as className} from "./styles/callout.module.scss"
+import sass, {callout as className} from "./styles/callout.module.scss"
 
 // labelData={{text: "Secret", color: "#25AA88", style: ["font-weight: 500;", "filter: brightness(130%);"]}}
 export default function Callout(props){
@@ -51,13 +51,10 @@ export default function Callout(props){
                     color: ${props.labelData ? props.labelData.color?props.labelData.color: "#ffd000": "#ffd000"};
                     ${props.labelData && props.labelData.style && props.labelData.style.join("")}
                 }
-
-                    
-                  
-                
+                            
 
             `}</style>
-            <div className={[className, props.label].join(" ")} style={props.style} id={props.id}>
+            <div className={[className, props.label||sass.noLabel].join(" ")} style={props.style} id={props.id}>
                 <div>{props.children || props.text}</div>
             </div>
         </>

@@ -9,6 +9,7 @@
     font-weight: 300;
     background-color: $gray;
     border-radius: 8px;
+    line-height: 140%;
     
     &::before{
         display: inline-block;
@@ -28,6 +29,10 @@
         border-radius: 8px;
         box-shadow: 0 0 10px 0 black;
     }    
+
+    &.noLabel{
+      margin-top: 20px;  
+    }
 }
 
 @media (max-width:600px){
