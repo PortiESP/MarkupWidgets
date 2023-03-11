@@ -22,6 +22,10 @@
     & img{
         object-fit:contain;
     }
+
+    & span {
+        display: none;
+    }
 }
 
 
@@ -57,6 +61,7 @@
         }
 
         & span{
+            display: inline-block;
             position: absolute;
             top: 40px;
             left: 0;
