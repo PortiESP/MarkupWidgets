@@ -277,7 +277,7 @@ Display an image, this component can be used in 3 diferent ways based on the pro
 > The image aspect-ratio will respected no matter the option used
 
 > ### **Props**
-> - `img` - Image object/path
+> - `src` - Image object/path
 > - `alt` - Alt text
 > - `title` - Add a *title* attribute
 > - `ratio` - Aspect ratio of the image (default 16/9)
@@ -289,12 +289,12 @@ Display an image, this component can be used in 3 diferent ways based on the pro
 import testImg from "./exampleImage.jpg"
 
 
-<Tags.Img img={testImg} alt="Alt text"/>
-<Tags.Img img="./images/image.jpg" alt="Alt text"/>
-<Tags.Img img="./images/image.jpg" width="100px" height="50px" alt="Alt text"/>
+<Tags.Img src={testImg} alt="Alt text"/>
+<Tags.Img src="./images/image.jpg" alt="Alt text"/>
+<Tags.Img src="./images/image.jpg" width="100px" height="50px" alt="Alt text"/>
 
-<Tags.Img img={testImg} alt="Alt text" title="Title" caption="Caption"/>
-<Tags.Img img={testImg} alt="Alt text" onClick={myCallback}/>
+<Tags.Img src={testImg} alt="Alt text" title="Title" caption="Caption"/>
+<Tags.Img src={testImg} alt="Alt text" onClick={myCallback}/>
 ```
 
 ![Img example screenshoot](https://i.gyazo.com/a3ef41ebe0be29818230b3b2791d4381.png  "Img example screenshoot")

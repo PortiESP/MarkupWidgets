@@ -10,7 +10,7 @@ export default function Img(props){
     const [zoom, setZoom] = useState(false)
 
     const img = <Image 
-                    src={props.img} 
+                    src={props.src} 
                     alt={props.alt || props.title}
                     title={props.title}
                     fill
