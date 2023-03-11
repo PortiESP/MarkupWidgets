@@ -313,6 +313,7 @@ Display an image with an aside section for text or other tags
 > - `title` - Add a the *alt* and *title* value
 > - `ratio` - Aspect ratio of the image (default 1/1)
 > - `imgProportion` - Porcetage of the block that will be reserved for the image
+> - `separator` - Adds a separation line between the img and the aside section
 > - `style` - Styles object
 > - `id` - Add an ID attribute
 
