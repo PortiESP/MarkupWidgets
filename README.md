@@ -185,6 +185,7 @@ const myArray = {
   - [`SubPage`](#SubPage)
   - [`Section`](#section)
   - [`KbdKey`](#kbdkey)
+  - [`Comment`](#comment)
 
 
 ## Title
@@ -765,5 +766,23 @@ This widget adds a styled keyboard key as an inline tag
 
 ![Section screenshoot](https://i.gyazo.com/0e8fe0f1907185b0cbfad2da85b1eb03.png "KbdKey screenshoot")
 ![Section screenshoot](https://i.gyazo.com/7597daf49bfe2f81a60ab44a7d8e7a65.png "KbdKey hover screenshoot")
+
+[*Go to widgets*](#widgets-list)
+
+
+
+## Comment
+
+This widget adds a comment for some text, the comment appears when we hover to pointer over the commented string
+
+> ### **Props**
+> - `message` - The key value as a props
+
+
+```js
+    <p>Lets comment something: <Comment comment="This is a comment, some more info, some more info to fill the line">hello</Comment> some more text</p>
+```
+
+![Comment screenshoot](https://i.gyazo.com/1bf87543db2fe0b2f036fa28f206298f.png "Comment screenshoot")
 
 [*Go to widgets*](#widgets-list)

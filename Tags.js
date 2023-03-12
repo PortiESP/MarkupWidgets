@@ -16,9 +16,10 @@ import Url from "./tags/Url"
 import SubPage from "./tags/SubPage"
 import Section from "./tags/Section"
 import KbdKey from "./tags/KbdKey"
+import Comment from "./tags/Comment"
 
-const tags = { Title, Title2, Title3, Title4, Paragraph, Code, Color, Img, ImgTextAside, UList, Callout, Quote, Link, Hr, Button, Toggle, Block, Url, SubPage, Section, KbdKey }
+const tags = { Title, Title2, Title3, Title4, Paragraph, Code, Color, Img, ImgTextAside, UList, Callout, Quote, Link, Hr, Button, Toggle, Block, Url, SubPage, Section, KbdKey, Comment }
 
 // Exports
 export default tags; // Export all
-export { Title, Title2, Title3, Title4, Paragraph, Code, Color, Img, ImgTextAside, UList, Callout, Quote, Link, Hr, Button, Toggle, Block, Url, SubPage, Section, KbdKey }; // Export individual
+export { Title, Title2, Title3, Title4, Paragraph, Code, Color, Img, ImgTextAside, UList, Callout, Quote, Link, Hr, Button, Toggle, Block, Url, SubPage, Section, KbdKey, Comment }; // Export individual
