@@ -10,6 +10,10 @@
     background-color: $gray;
     border-radius: 8px;
     line-height: 140%;
+
+    & h2, & h3, & h4{
+        line-height: 120%;
+    }
     
     &::before{
         display: inline-block;
