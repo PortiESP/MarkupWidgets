@@ -795,14 +795,19 @@ This widget adds a comment for some text, the comment appears when we hover to p
 This widget displays a canvas to navigate over an SVG file, it also provides a menu where we can change the structure of the SVG to make an interactive canvas. 
 
 > **Features**
+> 
 > - **ZoomIn**/**ZoomOut** with the mouse wheel
 > - **Navigate** by *dragging* with *right-click*
-> - Page scroll is **blocked** while hoveing the canvas
 > - The scale is shown as '%' at the bottom-right corner, click it to reset to *100%*
 > - The menu can be hidden by clicking the header
 > - The menu provides 2 type of buttons *toggle* and *chamber*
 >   - The *toggle* allows to hide/show a list of HTML tags with an id in a list
 >   - The *chamber* does something similar but we can rotate between multiple views, only one shown at a time. This one can be also toggled
+
+> **INFO**
+> 
+> - The *MinMap* tag fits the parents box, so you should give a width and height to the parent of the *MinMap* tag
+> - Page scroll is **blocked** while hoveing the canvas
 
 > ### **Props**
 > - `width` - The max width of the SVG
