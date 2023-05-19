@@ -5,6 +5,7 @@ TO-DO List
     - New item types (title, separator, ...)
     - Responsive
     - New styles
+    - Initial hint / tutorial
 - Code
     - code highlighting
 - Callout
