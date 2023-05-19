@@ -35,9 +35,6 @@ export default function MindMap(props){
         }
     })
 
-    console.log(props.controls, controlsJSX)
-
-
     const moveEvent = e => {
         if (isPressed){
             let deltaX;
@@ -52,8 +49,6 @@ export default function MindMap(props){
                 deltaX = (mouseCoords[0] - e.clientX) * (zoom*0.75)
                 deltaY = (mouseCoords[1] - e.clientY) * (zoom*0.75)
             }
-
-            console.log(viewbox, deltaX, deltaY, zoom)  // DEBUG
 
             setViewbox([viewbox[0]+deltaX, viewbox[1]+deltaY, viewbox[2], viewbox[3]])  // Move viewbox
             setMouseCoords([e.clientX, e.clientY])  // Update coords
@@ -120,7 +115,6 @@ function Toggle(props){
     const [state, setState] = useState(props.initial || false)
 
     useEffect(()=>{
-        console.log("Setting: ", props.ids, " to ", state)
         setIds(props.ids, state)
     }, [state])
 
@@ -138,8 +132,6 @@ function Chamber(props){
     
     // Selected listener
     useEffect(()=>{
-        console.log("Setting selected to ", props.idsGroups[selected])
-
         // Hide unselected
         props.idsGroups.map( group => setIds(group.ids, false) ) 
         // Show selected
@@ -150,7 +142,6 @@ function Chamber(props){
 
     // State listener
     useEffect(()=>{
-        console.log("Setting: ", selected, " to ", state)
         setIds(props.idsGroups[selected].ids, state)
     }, [state])
 
