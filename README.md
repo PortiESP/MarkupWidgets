@@ -824,6 +824,7 @@ This widget displays a canvas to navigate over an SVG file, it also provides a m
             title: "test title",  // Hint shown while hovering over the item (optional)
             ids: ["Ellipse1", "Ellipse2"],  // List if IDs that will be affected by this item
             initial: true,  // The toggle will be activated by default (optional)
+            controls: [{}]   // Recursive submenus (same structure as the main one)
         },
         {   // Simplified example of toggle type
             label: "test3",
@@ -839,6 +840,7 @@ This widget displays a canvas to navigate over an SVG file, it also provides a m
                 {
                     label: "opt 1",  // Label of the option 1 (default)
                     ids: ["rect1", "rect2"],  // List if IDs that will be affected by this option
+                    controls: [{}]  // Recursive submenus when this option is selected (same structure as the main one)
                 },
                 {
                     label: "opt 2",

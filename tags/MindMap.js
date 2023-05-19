@@ -4,8 +4,20 @@ import sass from "./styles/mindmap.module.scss"
 import sass2 from "./styles/mindmap2.module.scss"
 import { useEffect, useState } from "react"
 
+// ========================================================================================================= FUNCTIONS
+function setIds(IDslist, state){
+    IDslist.map(id => document.getElementById(id).style.display = state ? "" : "none")
+}
+
+function itemGen(item, controls=undefined){
+    switch (item.type) {
+        case "toggle": return <Toggle label={item.label} title={item.title} ids={item.ids} initial={item.initial} controls={controls}/>
+        case "chamber": return <Chamber label={item.label} title={item.title} idsGroups={item.idsGroups} initial={item.initial}/>          
+    }
+}
 
 
+// ========================================================================================================= COMPONENTS
 // PROPS width=999, height=999, controls{label, title, type, initial, ids||idsGroups}
 export default function MindMap(props){
 
@@ -28,12 +40,8 @@ export default function MindMap(props){
 
     }
 
-    const controlsJSX = props.controls?.map(item => {
-        switch (item.type) {
-            case "toggle": return <Toggle label={item.label} title={item.title} ids={item.ids} initial={item.initial}/>
-            case "chamber": return <Chamber label={item.label} title={item.title} idsGroups={item.idsGroups} initial={item.initial}/>
-        }
-    })
+    const controlsJSX = props.controls.map(item => itemGen(item))
+
 
     const moveEvent = e => {
         if (isPressed){
@@ -103,32 +111,37 @@ export default function MindMap(props){
 
 
 
-function setIds(IDslist, state){
-    IDslist.map(id => document.getElementById(id).style.visibility = state ? "visible" : "hidden")
-}
-
 
 
 // PROPS {label="", ids[""], initial=false, title}
 function Toggle(props){
     
     const [state, setState] = useState(props.initial || false)
+    const [subMenus, setSubMenus] = useState(undefined)
+
+
+    // Recursive submenus
+    props.controls && setSubMenus(props.controls && state ? props.controls.map(item => itemGen(item)) : undefined)
 
     useEffect(()=>{
         setIds(props.ids, state)
     }, [state])
 
-    return (<div className={[sass2.div__toggle_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label} onClick={()=>setState(old=>!old)}>
-        <div className={sass2.div__toggle_label}>{props.label}</div>
-        <div className={sass2.icon__eye}></div>
-    </div>)
+    return (<>
+        <div className={[sass2.div__toggle_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label} onClick={()=>setState(old=>!old)}>
+            <div className={sass2.div__toggle_label}>{props.label}</div>
+            <div className={sass2.icon__eye}></div>
+        </div>
+        {subMenus}
+    </>)
 }
 
-// PROPS {label="", idsGroups[{label:"", ids:[""]}], initial=false, title=""}
+// PROPS {label="", idsGroups[{label:"", ids:[""]}], initial=false, title="", controls=[{}]}
 function Chamber(props){
     
     const [selected, setSelected] = useState(0)
     const [state, setState] = useState(props.initial || false)
+    const [subMenus, setSubMenus] = useState(undefined)
     
     // Selected listener
     useEffect(()=>{
@@ -137,6 +150,9 @@ function Chamber(props){
         // Show selected
         setIds(props.idsGroups[selected].ids, true)
         setState(true)
+
+        // Recursive submenus
+        setSubMenus(props.idsGroups[selected].controls ? props.idsGroups[selected].controls.map(item => itemGen(item)) : undefined)
 
     }, [selected])
 
@@ -147,17 +163,23 @@ function Chamber(props){
 
     
     // Initial settings
-    useEffect(()=> setState(false), [])
+    useEffect(()=> {
+        return ()=> setState(false)
+    }, [])
 
 
 
-    return (<div className={[sass2.div__chamber_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label}>
-        <div className={sass2.div__chamber_label} onClick={()=>setState(old=>!old)}>{props.label}</div>
-        <select className={sass2.select__chamber_selector} onChange={e=>setSelected(e.target.value)}>
-            {
-                props.idsGroups.map( (group,i) => <option key={i} value={i}>{group.label}</option>)
-            }
-        </select>
-        <div className={sass2.icon__eye} onClick={()=>setState(old=>!old)}></div>
-    </div>)
+    return (<>
+        <div className={[sass2.div__chamber_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label}>
+            <div className={sass2.div__chamber_label} onClick={()=>setState(old=>!old)}>{props.label}</div>
+            <select className={sass2.select__chamber_selector} onChange={e=>setSelected(e.target.value)}>
+                {
+                    props.idsGroups.map( (group,i) => <option key={i} value={i}>{group.label}</option>)
+                }
+            </select>
+            <div className={sass2.icon__eye} onClick={()=>setState(old=>!old)}></div>
+        </div>
+
+        {subMenus}
+    </>)
 }
