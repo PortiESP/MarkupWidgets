@@ -77,7 +77,7 @@ export default function MindMap(props){
             >
         {/* Image */}
         <div className={sass.div__image}>
-            <svg viewBox={viewbox.join(" ")} fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox={viewbox.join(" ")} fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                 {props.children}
             </svg>
         </div>
