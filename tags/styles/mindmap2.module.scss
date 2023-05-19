@@ -1,0 +1,74 @@
+
+$label: #fff8;
+$hover: #fff2;
+$active: url("../../assets/icons/eye-open.png");
+$unactive: url("../../assets/icons/eye-closed.png");
+
+
+// Common
+.icon__eye{
+    width: 30px;
+    height: 30px;
+}
+
+.state__on .icon__eye{
+    background: $active  center no-repeat;
+    background-size: 20px;
+    filter: invert(.6);
+}
+.state__off .icon__eye{
+    background: $unactive center no-repeat;
+    background-size: 20px;
+    filter: invert(.2);
+}
+
+
+// Button
+.div__toggle_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+
+    & .div__toggle_label{
+        color:$label;
+        max-width: 80%;
+        overflow: hidden;
+    }
+    
+
+    &:hover{
+        background: $hover;
+    }
+}
+
+// Select
+.div__chamber_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    
+    &.state__on .div__chamber_toggle{color: green;}
+    &.state__off .div__chamber_toggle{color: red;}
+    
+    & .div__chamber_label{
+        max-width: 40%;
+        overflow: hidden;
+        color:$label;
+    }
+    
+    & select{
+        padding: 4px;
+        border-radius: 4px;
+        background: #555;
+        font-family: inherit;
+        font-style: italic;
+        min-width: 40%;
+    }
+
+
+    &:hover{
+        background: $hover;
+    }
+}

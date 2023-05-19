@@ -186,6 +186,7 @@ const myArray = {
   - [`Section`](#section)
   - [`KbdKey`](#kbdkey)
   - [`Comment`](#comment)
+  - [`MindMap`](#mindmap)
 
 
 ## Title
@@ -784,5 +785,88 @@ This widget adds a comment for some text, the comment appears when we hover to p
 ```
 
 ![Comment screenshoot](https://i.gyazo.com/1bf87543db2fe0b2f036fa28f206298f.png "Comment screenshoot")
+
+[*Go to widgets*](#widgets-list)
+
+
+
+## MindMap
+
+This widget displays a canvas to navigate over an SVG file, it also provides a menu where we can change the structure of the SVG to make an interactive canvas. 
+
+> **Features**
+> - **ZoomIn**/**ZoomOut** with the mouse wheel
+> - **Navigate** by *dragging* with *right-click*
+> - Page scroll is **blocked** while hoveing the canvas
+> - The scale is shown as '%' at the bottom-right corner, click it to reset to *100%*
+> - The menu can be hidden by clicking the header
+> - The menu provides 2 type of buttons *toggle* and *chamber*
+>   - The *toggle* allows to hide/show a list of HTML tags with an id in a list
+>   - The *chamber* does something similar but we can rotate between multiple views, only one shown at a time. This one can be also toggled
+
+> ### **Props**
+> - `width` - The max width of the SVG
+> - `height` - The max height of the SVG
+> - `controls` - The list of options that will be shown in the menu
+> - `children` (*wrapped*) - The SVG code **without the `svg` tag, just the child**
+
+
+```js
+    const controls = [
+        {   // Example of toggle type
+            label: "test1",  // Label shown in the menu
+            type: "toggle",  // Type of item [toggle|chamber]
+            title: "test title",  // Hint shown while hovering over the item (optional)
+            ids: ["Ellipse1", "Ellipse2"],  // List if IDs that will be affected by this item
+            initial: true,  // The toggle will be activated by default (optional)
+        },
+        {   // Simplified example of toggle type
+            label: "test3",
+            type: "toggle",
+            ids: ["Ellipse1"]
+        },
+        {   // Example of chamber type
+            label: "test2",
+            type: "chamber",
+            title: "chamber title",
+            initial: true,  // The toggle will be activated by default (optional)
+            idsGroups: [  // List of options show in the select
+                {
+                    label: "opt 1",  // Label of the option 1 (default)
+                    ids: ["rect1", "rect2"],  // List if IDs that will be affected by this option
+                },
+                {
+                    label: "opt 2",
+                    ids: ["rect3", "rect4"]
+                },
+                {
+                    label: "opt 3",
+                    ids: ["rect5", "rect6"]
+                },
+            ]
+        },
+    ]
+```
+
+```js
+    // WRONG CODE
+    <MindMap MindMap width={892} height={562} controls={controls}>
+        <svg> {/* <--- DO NOT PALCE THIS TAG */} 
+            <rect width="892" height="562" fill="#F5F5F5"/>
+            <rect width="892" height="562" fill="#F5F5F5"/>
+            <rect width="892" height="562" fill="#F5F5F5"/>
+        </svg> {/* <--- DO NOT PALCE THIS TAG */} 
+    </MindMap>
+
+    // RIGHT CODE
+    <MindMap MindMap width={892} height={562} controls={controls}>
+            <rect width="892" height="562" fill="#F5F5F5"/>
+            <rect width="892" height="562" fill="#F5F5F5"/>
+            <rect width="892" height="562" fill="#F5F5F5"/>
+    </MindMap>
+```
+
+![MindMap screenshoot](https://i.gyazo.com/b4d1516985c1f37cf8f5781c04ba60e0.png "MindMap screenshoot")
+> [View MindMap GIF](https://i.gyazo.com/936fb287fb535a37bdefbb6f48623e08.mp4 "MindMap GIF")
 
 [*Go to widgets*](#widgets-list)
