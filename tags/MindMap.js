@@ -1,8 +1,13 @@
 'use client'
 
+import Image from "next/image"
 import sass from "./styles/mindmap.module.scss"
 import sass2 from "./styles/mindmap2.module.scss"
 import { useEffect, useState } from "react"
+
+import hintIcon1 from "../assets/icons/movement.png"
+import hintIcon2 from "../assets/icons/eye-open.png"
+import hintIcon3 from "../assets/icons/zoom-in.png"
 
 // ========================================================================================================= FUNCTIONS
 function setIds(IDslist, state){
@@ -21,7 +26,8 @@ function itemGen(item, controls=undefined){
 // PROPS width=999, height=999, controls{label, title, type, initial, ids||idsGroups}
 export default function MindMap(props){
 
-    const [hide, setHide] = useState(false)
+    const [hints, setHints] = useState(true)
+    const [hide, setHide] = useState(hints)
     const [viewbox, setViewbox] = useState([0, 0, props.width, props.height])
     const [mouseCoords, setMouseCoords] = useState([0, 0])
     const [isHover, setIsHover] = useState(false)
@@ -78,6 +84,16 @@ export default function MindMap(props){
                 onMouseUp={()=>setIsPressed(false)}
                 onMouseMove={moveEvent}
             >
+        {/* Hint */}
+        {hints && <div className={sass.div__hint}>
+            <div className={sass.div__hint_info}>
+                <div><div className={sass.div__hint_icon}><Image src={hintIcon1} fill/></div><div>Navigate the canvas with the mouse: Scroll and Drag</div></div>
+                <div><div className={sass.div__hint_icon}><Image src={hintIcon2} fill/></div><div>Show/Hide the different views in the menu</div></div>
+                <div><div className={sass.div__hint_icon}><Image src={hintIcon3} fill/></div><div>Reset the scale in the scale label at the bottom-right</div></div>
+            </div>
+            <span>The page scroll will be blocked while hovering the canvas</span>
+            <button onClick={()=>{setHints(false);setHide(false)}}>Ready!</button>
+        </div>}
         {/* Image */}
         <div className={sass.div__image}>
             <svg viewBox={viewbox.join(" ")} fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -88,7 +104,7 @@ export default function MindMap(props){
         {   controlsJSX &&
             <div className={sass.div__menu}>
                 {/* Menu header */}
-                <div className={[sass.div__menu_header, hide&&sass.status__hide].join(" ")} onClick={()=>setHide(old => !old)}>
+                <div className={[sass.div__menu_header, hide && sass.status__hide].join(" ")} onClick={()=>setHide(old => !old)}>
                     <span className={sass.span__header_title}>Menu</span>
                     <span className={sass.span__header_icon}></span>
                 </div>
@@ -112,7 +128,7 @@ export default function MindMap(props){
 
 
 
-
+// ============================================================================================================ SUB-COMPONENTS
 
 // PROPS {label="", ids[""], initial=false, title}
 function Toggle(props){
