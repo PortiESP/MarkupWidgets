@@ -1,6 +1,8 @@
 
 TO-DO List
 
+- Comment props as documentation in all components
+
 - MindMap
     - New item types (title, separator, ...)
     - Responsive

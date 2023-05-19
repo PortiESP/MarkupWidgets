@@ -104,7 +104,8 @@ export default function MindMap(props){
         }
         {/* Zoom label */}
         <span className={sass.span__zoom} onClick={()=>{setZoom(1); setViewbox([0, 0, props.width, props.height])}}>
-            {Math.round((1/zoom)*100)}%
+            <span>Reset?</span>
+            <span>x{Math.round((1/zoom)*100)}%</span>
         </span>
     </div>)
 }
