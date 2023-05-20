@@ -15,7 +15,7 @@
     
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 400px;
 
     background: #0008;
     padding: 10px;
@@ -66,10 +66,11 @@
 
 
 .div__hint{
-    background: #000d;
+    background: #000e;
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
@@ -83,7 +84,6 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
         font-weight: 300;
-        // font-style: italic;
 
         & > div{
             display: flex;
@@ -112,6 +112,8 @@
     & > span{
         font-style: italic;
         color: #fff8;
+        text-align: center;
+        width: 80%;
     }
     & > button{
         padding: 10px 30px;
@@ -169,5 +171,32 @@
     svg{
         height: 100%;
         width: 100%;
+    }
+}
+
+
+
+@media (max-width:1100px) {
+    .div__menu{
+        position: fixed;
+        width: 100%;
+        left: 0; right: 0;
+    }
+    .div__hint{
+        & .div__hint_info{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+
+            & > div {
+                flex-direction: row;
+
+                & .div__hint_icon{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
     }
 }

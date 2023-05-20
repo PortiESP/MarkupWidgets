@@ -86,9 +86,9 @@ export default function MindMap(props){
         {/* Hint */}
         {hints && <div className={sass.div__hint}>
             <div className={sass.div__hint_info}>
-                <div><div className={sass.div__hint_icon}><Image src={hintIcon1} fill/></div><div>Navigate the canvas with the mouse: Scroll and Drag</div></div>
-                <div><div className={sass.div__hint_icon}><Image src={hintIcon2} fill/></div><div>Show/Hide the different views in the menu</div></div>
-                <div><div className={sass.div__hint_icon}><Image src={hintIcon3} fill/></div><div>Reset the scale in the scale label at the bottom-right</div></div>
+                <div><div className={sass.div__hint_icon}><Image src={hintIcon1} fill alt="Arrows icon"/></div><div>Navigate the canvas with the mouse: Scroll and Drag</div></div>
+                <div><div className={sass.div__hint_icon}><Image src={hintIcon2} fill alt="Eye icon"/></div><div>Show/Hide the different views in the menu</div></div>
+                <div><div className={sass.div__hint_icon}><Image src={hintIcon3} fill alt="Scale icon"/></div><div>Reset the scale in the scale label at the bottom-right</div></div>
             </div>
             <span>The page scroll will be blocked while hovering the canvas</span>
             <button onClick={()=>{setHints(false);setHide(false)}}>Ready!</button>
