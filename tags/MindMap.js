@@ -11,13 +11,14 @@ import hintIcon3 from "../assets/icons/zoom-in.png"
 
 // ========================================================================================================= FUNCTIONS
 function setIds(IDslist, state){
-    IDslist.map(id => document.getElementById(id).style.display = state ? "" : "none")
+    console.log("Setting to ", state, " => ", IDslist)
+    IDslist.map(id => {if (document.getElementById(id)) document.getElementById(id).style.display = state ? "" : "none"})
 }
 
-function itemGen(item, controls=undefined){
+function itemGen(item, controls=undefined, i=0){
     switch (item.type) {
-        case "toggle": return <Toggle label={item.label} title={item.title} ids={item.ids} initial={item.initial} controls={controls}/>
-        case "chamber": return <Chamber label={item.label} title={item.title} idsGroups={item.idsGroups} initial={item.initial}/>          
+        case "toggle": return <Toggle key={i} label={item.label} title={item.title} ids={item.ids} initial={item.initial} controls={controls}/>
+        case "chamber": return <Chamber key={i} label={item.label} title={item.title} idsGroups={item.idsGroups} initial={item.initial}/>          
     }
 }
 
@@ -45,8 +46,6 @@ export default function MindMap(props){
         setZoom(viewbox[2]/props.width)
 
     }
-
-    const controlsJSX = props.controls.map(item => itemGen(item))
 
 
     const moveEvent = e => {
@@ -101,7 +100,7 @@ export default function MindMap(props){
             </svg>
         </div>
         {/* Menu */}
-        {   controlsJSX &&
+        {   props.controls?.length &&
             <div className={sass.div__menu}>
                 {/* Menu header */}
                 <div className={[sass.div__menu_header, hide && sass.status__hide].join(" ")} onClick={()=>setHide(old => !old)}>
@@ -111,9 +110,8 @@ export default function MindMap(props){
                 {/* Menu items */}
                     <div className={[sass.div__menu_body, hide&&sass.state__hide].join(" ")}>
                         <hr/>
-                        
                         {
-                            controlsJSX
+                            props.controls.map((item,i) => itemGen(item, undefined, i))
                         }
                     </div>
             </div>
@@ -130,26 +128,21 @@ export default function MindMap(props){
 
 // ============================================================================================================ SUB-COMPONENTS
 
-// PROPS {label="", ids[""], initial=false, title}
+// PROPS {label="", ids[""], initial=false, title, controls=[{}]}
 function Toggle(props){
     
     const [state, setState] = useState(props.initial || false)
-    const [subMenus, setSubMenus] = useState(undefined)
 
-
-    // Recursive submenus
-    props.controls && setSubMenus(props.controls && state ? props.controls.map(item => itemGen(item)) : undefined)
-
-    useEffect(()=>{
-        setIds(props.ids, state)
-    }, [state])
+    setIds(props.ids, state)
 
     return (<>
         <div className={[sass2.div__toggle_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label} onClick={()=>setState(old=>!old)}>
             <div className={sass2.div__toggle_label}>{props.label}</div>
             <div className={sass2.icon__eye}></div>
         </div>
-        {subMenus}
+
+        {/* Submenus */}
+        {props.controls && state ? props.controls.map(item => itemGen(item)): undefined}
     </>)
 }
 
@@ -158,33 +151,16 @@ function Chamber(props){
     
     const [selected, setSelected] = useState(0)
     const [state, setState] = useState(props.initial || false)
-    const [subMenus, setSubMenus] = useState(undefined)
-    
-    // Selected listener
+
+    // Initial render
     useEffect(()=>{
-        // Hide unselected
-        props.idsGroups.map( group => setIds(group.ids, false) ) 
-        // Show selected
-        setIds(props.idsGroups[selected].ids, true)
-        setState(true)
+        props.idsGroups.map(group=>setIds(group.ids, false))
+        setIds(props.idsGroups[0].ids, true)
+    }, [])    
 
-        // Recursive submenus
-        setSubMenus(props.idsGroups[selected].controls ? props.idsGroups[selected].controls.map(item => itemGen(item)) : undefined)
-
-    }, [selected])
-
-    // State listener
-    useEffect(()=>{
-        setIds(props.idsGroups[selected].ids, state)
-    }, [state])
-
-    
-    // Initial settings
-    useEffect(()=> {
-        return ()=> setState(false)
-    }, [])
-
-
+    // Every render
+    props.idsGroups.map(group=>setIds(group.ids, false))
+    setIds(props.idsGroups[selected].ids, true)
 
     return (<>
         <div className={[sass2.div__chamber_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label}>
@@ -197,6 +173,7 @@ function Chamber(props){
             <div className={sass2.icon__eye} onClick={()=>setState(old=>!old)}></div>
         </div>
 
-        {subMenus}
+        {/* Submenus */}
+        { props.idsGroups[selected].controls?.map((item,i) => itemGen(item, undefined, i)) }
     </>)
 }

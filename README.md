@@ -808,6 +808,7 @@ This widget displays a canvas to navigate over an SVG file, it also provides a m
 > 
 > - The *MinMap* tag fits the parents box, so you should give a width and height to the parent of the *MinMap* tag
 > - Page scroll is **blocked** while hoveing the canvas
+> - Also remember that JSX uses the *camelCase* naming convention while some SVG attributes have dashes in its name, so you should replace all thoose names such as: *stroke-width* to *strokeWidth*
 
 > ### **Props**
 > - `width` - The max width of the SVG
