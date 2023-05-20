@@ -11,7 +11,6 @@ import hintIcon3 from "../assets/icons/zoom-in.png"
 
 // ========================================================================================================= FUNCTIONS
 function setIds(IDslist, state){
-    console.log("Setting to ", state, " => ", IDslist)
     IDslist.map(id => {if (document.getElementById(id)) document.getElementById(id).style.display = state ? "" : "none"})
 }
 
@@ -36,6 +35,7 @@ export default function MindMap(props){
     const [zoom, setZoom] = useState(1)
     const baseInc = 0.9
 
+    // Handle scroll event
     const wheelEvent = e => {
         const isMax = () => (viewbox[2]+baseInc > props.width) || (viewbox[3]+baseInc > props.height)
 
@@ -47,7 +47,7 @@ export default function MindMap(props){
 
     }
 
-
+    // Handle drag event
     const moveEvent = e => {
         if (isPressed){
             let deltaX;
@@ -133,7 +133,10 @@ function Toggle(props){
     
     const [state, setState] = useState(props.initial || false)
 
-    setIds(props.ids, state)
+    useEffect(()=>{
+        setIds(props.ids, state)
+    })
+    
 
     return (<>
         <div className={[sass2.div__toggle_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label} onClick={()=>setState(old=>!old)}>
@@ -159,8 +162,10 @@ function Chamber(props){
     }, [])    
 
     // Every render
-    props.idsGroups.map(group=>setIds(group.ids, false))
-    setIds(props.idsGroups[selected].ids, true)
+    useEffect(()=>{
+        props.idsGroups.map(group=>setIds(group.ids, false))
+        setIds(props.idsGroups[selected].ids, true)
+    })
 
     return (<>
         <div className={[sass2.div__chamber_wrap, state ? sass2.state__on : sass2.state__off].join(" ")} title={props.title || props.label}>
