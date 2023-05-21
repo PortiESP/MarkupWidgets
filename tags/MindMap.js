@@ -164,7 +164,7 @@ function Chamber(props){
     // Every render
     useEffect(()=>{
         props.idsGroups.map(group=>setIds(group.ids, false))
-        setIds(props.idsGroups[selected].ids, true)
+        setIds(props.idsGroups[selected].ids, state)
     })
 
     return (<>
